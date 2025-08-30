@@ -1,0 +1,45 @@
+/* --- 1. Reset & flex para footer fijo --- */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f6fa;
+    color: #222;
+}
+
+/* --- 2. Header --- */
+header {
+    background: #1d2a41;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .1);
+}
+header h1 {
+    margin: 0;
+    font-size: 2.3em;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 10px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 12px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
