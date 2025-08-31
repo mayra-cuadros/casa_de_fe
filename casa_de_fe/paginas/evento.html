@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eventos - Casa de Fe</title>
   <link rel="stylesheet" href="../css/inicio.css" />
-  <link rel="stylesheet" href="../css/evento.css" /> <!-- Aquí enlazamos evento.css -->
+  <link rel="stylesheet" href="../css/evento.css" />
   <link rel="icon" href="../img/cdf2.png" type="image/png">
 
   <!-- FullCalendar CSS -->
@@ -23,7 +23,7 @@
     <nav>
       <a href="../index.html">Inicio</a>
       <a href="./carta.html">Carta</a>
-      <a href="./evento.html">Evento</a>
+      <a href="./evento.html" class="activo">Evento</a>
       <a href="./cursos.html">Cursos</a>
       <a href="./contacto.html">Contacto</a>
       <a href="./ofrenda.html">Ofrenda</a>
@@ -31,48 +31,29 @@
   </header>
 
   <main class="centrar">
-    <h2 style="margin-bottom:20px;">📅 Calendario de Eventos</h2>
-    <div id="calendar"></div>
-  </main>
+  <h2 style="margin-bottom:20px;">Calendario de Eventos</h2>
+  <div id="calendar"></div>
+</main>
 
-  <footer>
-    <p>&copy; 2025 Casa de Fe - Todos los derechos reservados</p>
-  </footer>
+<!-- Modal para info de evento -->
+<div id="modal" class="modal">
+  <div class="modal-contenido">
+    <span id="cerrar">&times;</span>
+    <h3 id="modal-titulo"></h3>
+    <p><strong>Fecha:</strong> <span id="modal-fecha"></span></p>
+    <p><strong>Hora:</strong> <span id="modal-hora"></span></p>
+    <p><strong>Descripción:</strong> <span id="modal-desc"></span></p>
+    
+    <!-- Botón pedir información -->
+    <button id="btn-info" class="btn-info" href ="contacto.html">Pedir información</button>
+  </div>
+</div>
+
 
   <!-- FullCalendar JS -->
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var calendarEl = document.getElementById('calendar');
-
-      var calendar = new FullCalendar.Calendar(calendarEl, {
-        initialView: 'dayGridMonth',
-        locale: 'es', // idioma español
-        headerToolbar: {
-          left: 'prev,next today',
-          center: 'title',
-          right: 'dayGridMonth,timeGridWeek,timeGridDay'
-        },
-        events: [
-          {
-            title: 'Reunión de Oración',
-            start: '2025-09-02T19:00:00'
-          },
-          {
-            title: 'Escuela Dominical',
-            start: '2025-09-07T10:00:00',
-            end: '2025-09-07T11:30:00'
-          },
-          {
-            title: 'Concierto de Alabanza',
-            start: '2025-09-15T18:30:00'
-          }
-        ]
-      });
-
-      calendar.render();
-    });
-  </script>
+  <!-- Tu archivo JS externo -->
+  <script src="../js/evento.js"></script>
 </body>
 
 </html>
