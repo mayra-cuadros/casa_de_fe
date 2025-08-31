@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
     <link rel="stylesheet" href="./css/inicio.css" />
+    <link rel="stylesheet" href="./css/galeria.css">
 
     <link rel="icon" href="./img/cdf2.png" type="image/png">
 
@@ -51,10 +52,26 @@
         </div>
 
         <!-- Galería de Imágenes de la Iglesia adriano -->
-        <div>
-
+        <div id="lightbox" class="lb" hidden>
+            <button id="lightbox-close" class="lb-close" aria-label="Cerrar">x</button>
+            <img id="lightbox-img" alt="">
         </div>
 
+        <!-- Script de galería -->
+        <script src="../casa_de_fe/js/galeria.js"></script>
+        <section>
+            <h2>Galería</h2>
+            <div id="galeria">
+                <img src="./img/cdf1.png" alt="CDF 1">
+                <img src="./img/cdf2.png" alt="CDF 2">
+                <img src="./img/cdf3.png" alt="CDF 3">
+                <img src="./img/Logo.png" alt="Logo Casa de Fe">
+            </div>
+        </section>
+        
+
+        <!-- Script de galería -->
+        <script src="./js/galeria.js"></script>
 
     </main>
 
