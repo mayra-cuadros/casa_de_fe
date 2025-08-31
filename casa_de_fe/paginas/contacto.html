@@ -5,13 +5,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto - Inscripción a Cursos</title>
-  <link rel="stylesheet" href="../css/contacto.css">
+  <link rel="stylesheet" href="../css/inicio.css" />
+  <link rel="stylesheet" href="../css/contacto.css" />
+  <link rel="icon" href="../img/cdf2.png" type="image/png">
 </head>
 
 <body>
   <header>
+    <div class="logo-container">
+      <img src="../img/Logo.png" alt="Logo" class="logo">
+      <h1>Casa de Fe</h1>
+    </div>
+
     <nav>
-      <a href="/">Inicio</a>
+      <a href="../index.html">Inicio</a>
       <a href="./carta.html">Carta</a>
       <a href="./evento.html">Evento</a>
       <a href="./cursos.html">Cursos</a>
@@ -21,7 +28,8 @@
   </header>
 
   <main class="contenedor">
-    <h2>Inscripción a Cursos</h2>
+    <h2 style="color:#1d2a41; margin-bottom:20px;">Inscripción a Cursos</h2>
+
     <form class="formulario" action="guardar_inscripcion.php" method="POST">
       <label for="nombre">Nombre completo</label>
       <input type="text" id="nombre" name="nombre" required>
