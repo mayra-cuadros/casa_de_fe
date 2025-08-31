@@ -1,39 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evento</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos - Casa de Fe</title>
+  <link rel="stylesheet" href="../css/inicio.css" />
+  <link rel="stylesheet" href="../css/evento.css" /> <!-- Aquí enlazamos evento.css -->
+  <link rel="icon" href="../img/cdf2.png" type="image/png">
+
+  <!-- FullCalendar CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <!-- logo -->
-        <!-- Banner -->
+  <header>
+    <div class="logo-container">
+      <img src="../img/Logo.png" alt="Logo" class="logo">
+      <h1>Casa de Fe</h1>
+    </div>
 
-        <!-- Navegación -->
-        <nav>
-            <a href="/">Inicio</a>
-            <a href="./carta.html">Carta</a>
-            <a href="./evento.html">Evento</a>
-            <a href="./cursos.html">Cursos</a>
-            <a href="./contacto.html">Contacto</a>
-            <a href="./ofrenda.html">Ofrenda</a>
+    <nav>
+      <a href="../index.html">Inicio</a>
+      <a href="./carta.html">Carta</a>
+      <a href="./evento.html">Evento</a>
+      <a href="./cursos.html">Cursos</a>
+      <a href="./contacto.html">Contacto</a>
+      <a href="./ofrenda.html">Ofrenda</a>
+    </nav>
+  </header>
 
-        </nav>
-    </header>
+  <main class="centrar">
+    <h2 style="margin-bottom:20px;">📅 Calendario de Eventos</h2>
+    <div id="calendar"></div>
+  </main>
 
-    <main class="centrar">
-        <!-- Contenido aquí -->
+  <footer>
+    <p>&copy; 2025 Casa de Fe - Todos los derechos reservados</p>
+  </footer>
 
+  <!-- FullCalendar JS -->
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var calendarEl = document.getElementById('calendar');
 
-    </main>
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        locale: 'es', // idioma español
+        headerToolbar: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'dayGridMonth,timeGridWeek,timeGridDay'
+        },
+        events: [
+          {
+            title: 'Reunión de Oración',
+            start: '2025-09-02T19:00:00'
+          },
+          {
+            title: 'Escuela Dominical',
+            start: '2025-09-07T10:00:00',
+            end: '2025-09-07T11:30:00'
+          },
+          {
+            title: 'Concierto de Alabanza',
+            start: '2025-09-15T18:30:00'
+          }
+        ]
+      });
 
-    <footer>
-        <!-- pie de pagina -->
-
-    </footer>
+      calendar.render();
+    });
+  </script>
 </body>
 
 </html>
