@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto - Inscripción a Cursos</title>
-  <link rel="stylesheet" href="../css/inicio.css" />
-  <link rel="stylesheet" href="../css/contacto.css" />
+  <title>Contacto - Inscripción y Asesoría</title>
   <link rel="icon" href="../img/cdf2.png" type="image/png">
+  <link rel="stylesheet" href="../css/contacto.css" />
+  <link rel="stylesheet" href="../css/inicio.css" />
 </head>
 
 <body>
@@ -18,48 +18,82 @@
     </div>
 
     <nav>
-      <a href="../index.html">Inicio</a>
-      <a href="./carta.html">Carta</a>
-      <a href="./evento.html">Evento</a>
-      <a href="./cursos.html">Cursos</a>
-      <a href="./contacto.html" class="activo">Contacto</a>
-      <a href="./ofrenda.html">Ofrenda</a>
+      <a href="../casa_de_fe.html">Inicio</a>
+      <a href="/paginas/carta.html">Carta</a>
+      <a href="/paginas/evento.html">Evento</a>
+      <a href="/paginas/cursos.html">Cursos</a>
+      <a href="/paginas/contacto.html" class="activo">Contacto</a>
+      <a href="/paginas/ofrenda.html">Ofrenda</a>
     </nav>
   </header>
 
   <main class="contenedor">
-    <h2 style="color:#1d2a41; margin-bottom:20px;">Inscripción a Cursos</h2>
+    <h2>Contáctanos</h2>
 
     <form class="formulario" action="guardar_inscripcion.php" method="POST">
-      <label for="nombre">Nombre completo</label>
-      <input type="text" id="nombre" name="nombre" required>
+      <!-- Nombre -->
+      <div class="campo">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" required>
+      </div>
 
-      <label for="email">Correo electrónico</label>
-      <input type="email" id="email" name="email" required>
+      <!-- Correo -->
+      <div class="campo">
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" required>
+      </div>
 
-      <label for="telefono">Teléfono de contacto</label>
-      <input type="tel" id="telefono" name="telefono" required>
+      <!-- Teléfono -->
+      <div class="campo">
+        <label for="telefono">Teléfono de contacto</label>
+        <input type="tel" id="telefono" name="telefono" required>
+      </div>
 
-      <label for="curso">Curso seleccionado</label>
-      <select id="curso" name="curso" required>
-        <option value="">-- Seleccione un curso --</option>
-        <option value="discipulado">Discipulado</option>
-        <option value="liderazgo">Liderazgo</option>
-        <option value="escuela_biblica">Escuela Bíblica</option>
-      </select>
+      <!-- Tipo de información -->
+      <div class="campo">
+        <label for="tipo">Tipo de información que desea</label>
+        <select id="tipo" name="tipo" required>
+          <option value="">-- Seleccione una opción --</option>
+          <option value="asesoria">Asesoría</option>
+          <option value="ayuda">Ayuda</option>
+          <option value="inscripcion">Inscripción en cursos</option>
+          <option value="informacion">Más información</option>
+        </select>
+      </div>
 
-      <button type="submit">Enviar inscripción</button>
+      <!-- Cursos (solo visible si elige inscripción) -->
+      <div class="campo" id="curso-container">
+        <label for="curso">Curso seleccionado</label>
+        <select id="curso" name="curso">
+          <option value="">-- Seleccione un curso --</option>
+          <option value="discipulado">Discipulado</option>
+          <option value="liderazgo">Liderazgo</option>
+          <option value="escuela_biblica">Escuela Bíblica</option>
+        </select>
+      </div>
+
+      <!-- Mensaje adicional -->
+      <div class="campo campo-grande">
+        <label for="mensaje">Mensaje / Detalle de su solicitud</label>
+        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escriba aquí su consulta..." required></textarea>
+      </div>
+
+      <!-- Botón -->
+      <div class="campo campo-boton">
+        <button type="submit">Enviar solicitud</button>
+      </div>
     </form>
 
     <!-- mensaje de confirmación -->
-    <div id="mensaje" class="oculto">
-      ✅ Tu inscripción fue registrada con éxito.
+    <div id="confirmacion" class="oculto">
+      Tu solicitud fue registrada con éxito. ¡Gracias por contactarnos!
     </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 Casa de Fé</p>
   </footer>
+
+  <script src="../js/contacto.js"></script>
 </body>
 
 </html>
