@@ -1,0 +1,40 @@
+.compromiso-wrap {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 16px;
+  text-align: center;
+}
+
+.compromiso-title {
+  font-size: clamp(24px, 3vw, 36px);
+  margin-bottom: 6px;
+  color: #1d2a41;
+  font-weight: 800;
+}
+
+.compromiso-subtitle {
+  margin-bottom: 28px;
+  font-size: .95rem;
+  letter-spacing: .12em;
+  color: #6c7a92;
+}
+
+.compromiso-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.compromiso-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+  border: 1px solid #e8edf4;
+  padding: 20px 22px;
+  text-align: left;
+}
+
+.compromiso-card p {
+  margin: 0;
+  line-height: 1.6;
+  color: #2d3b52;
+}
