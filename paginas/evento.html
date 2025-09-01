@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos - Casa de Fe</title>
+   <link rel="icon" href="../img/cdf2.png" type="image/png">
+
+  <link rel="stylesheet" href="../css/inicio.css" />
+  <link rel="stylesheet" href="../css/evento.css" />
+
+</head>
+
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="../img/Logo.png" alt="Logo" class="logo">
+      <h1>Casa de Fe</h1>
+    </div>
+
+     <nav id="main-nav">
+    <a href="../casa_de_fe.html">Inicio</a>
+    <a href="evento.html" class="activo">Evento</a>
+    <a href="cursos.html">Cursos</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="ofrenda.html">Ofrenda</a>
+  </nav>
+  </header>
+
+  <main class="centrar">
+    <h2 style="margin-bottom:20px;">Calendario de Eventos</h2>
+    <div id="calendar"></div>
+  </main>
+
+  <!-- Modal para info de evento -->
+  <div id="modal" class="modal">
+    <div class="modal-contenido">
+      <span id="cerrar">&times;</span>
+      <h3 id="modal-titulo"></h3>
+      <p><strong>Fecha:</strong> <span id="modal-fecha"></span></p>
+      <p><strong>Hora:</strong> <span id="modal-hora"></span></p>
+      <p><strong>Descripción:</strong> <span id="modal-desc"></span></p>
+
+      <!-- Botón pedir información -->
+      <a id="btn-info" class="btn-info" href="contacto.html">Pedir información</a>
+    </div>
+  </div>
+
+  <!-- FullCalendar JS -->
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+  <!-- Tu archivo JS externo -->
+  <script src="../js/evento.js"></script>
+</body>
+
+</html>

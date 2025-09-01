@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofrenda</title>
+    <link rel="icon" href="../img/cdf2.png" type="image/png">
+    <link rel="stylesheet" href="../css/inicio.css" />
+    <link rel="stylesheet" href="./css/inicio.css" />
+    <link rel="stylesheet" href="../css/donacion.css" />
+
+    <link rel="icon" href="./img/cdf2.png" type="image/png">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="../img/Logo.png" alt="Logo" class="logo">
+            <h1>Casa de Fe</h1>
+        </div>
+        <!-- Navegación -->
+        <nav id="main-nav">
+            <a href="../casa_de_fe.html">Inicio</a>
+            <a href="evento.html" class="activo">Evento</a>
+            <a href="cursos.html">Cursos</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="ofrenda.html">Ofrenda</a>
+        </nav>
+    </header>
+
+    <main class="centrar">
+        <section class="intro">
+            <h2>Apoya el trabajo de la iglesia con tu donación</h2>
+            <p class="subtitle">Tu contribución es segura y ayuda a continuar nuestra labor espiritual y social.</p>
+        </section>
+        <form id="donation-form" class="donation-form" novalidate>
+            <fieldset>
+                <legend>Información personal</legend>
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo" />
+
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com" />
+            </fieldset>
+
+            <fieldset>
+                <legend>Detalles de la donación</legend>
+                <label for="monto">Monto a donar S/.</label>
+                <input type="number" id="monto" name="monto" min="1" step="0.01" required placeholder="Ej. 50.00" />
+
+                <label for="metodo">Método de pago</label>
+                <select id="metodo" name="metodo" required>
+                    <option value="" disabled selected>Seleccione un método</option>
+                    <option value="tarjeta">Tarjeta de crédito/débito</option>
+                    <option value="paypal">Yape</option>
+                    <option value="transferencia">Plin</option>
+                </select>
+                <div class="qr-container">
+                    <div class="qr-item">
+                        <p class="qr-title">Yape</p>
+                        <img src="../img/qrplin.jpg" alt="QR Yape" />
+                    </div>
+                    <div class="qr-item">
+                        <p class="qr-title">Plin</p>
+                        <img src="../img/qrplin.jpg" alt="QR Plin" />
+                    </div>
+                </div>
+                <label for="mensaje">Mensaje (opcional)</label>
+                <textarea id="mensaje" name="mensaje" rows="3" placeholder="Escribe un mensaje..."></textarea>
+            </fieldset>
+            <button type="submit" class="btn-submit">Donar ahora</button>
+        </form>
+        <div id="mensaje-confirmacion" class="mensaje-confirmacion oculto">
+            <p>¡Gracias por tu generosidad! Tu donación ha sido recibida con éxito.</p>
+            <a href="donacion.html" class="btn-primary">Realizar otra donación</a>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <!-- pie de pagina -->
+
+    </footer>
+    
+</body>
+
+</html>
