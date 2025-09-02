@@ -6,83 +6,177 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ofrenda</title>
     <link rel="icon" href="../img/cdf2.png" type="image/png">
-    <link rel="stylesheet" href="../css/inicio.css" />
-    <link rel="stylesheet" href="./css/inicio.css" />
-    <link rel="stylesheet" href="../css/donacion.css" />
+   <link rel="stylesheet" href="../css/inicio.css" />
+<link rel="stylesheet" href="../css/donacion.css" />
+<link rel="stylesheet" href="../css/footer.css"/>
+<link rel="stylesheet" href="../css/header.css">
+
 
     <link rel="icon" href="./img/cdf2.png" type="image/png">
 </head>
 
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="../img/Logo.png" alt="Logo" class="logo">
-            <h1>Casa de Fe</h1>
-        </div>
-        <!-- Navegación -->
-        <nav id="main-nav">
-            <a href="../casa_de_fe.html">Inicio</a>
-            <a href="evento.html" class="activo">Evento</a>
-            <a href="cursos.html">Cursos</a>
-            <a href="contacto.html">Contacto</a>
-            <a href="ofrenda.html">Ofrenda</a>
-        </nav>
+    <header class="site-header">
+          <div class="header-inner">
+        <a class="brand" href="casa_de_fe.html">
+            <div class="logo-container">
+                <img src="../img/Logo.png" alt="Logo" class="logo">
+                <h1>Casa de Fe</h1>
+            </div>
+        </a>
+
+        <!-- Banner -->
+
+        <nav id="site-nav" class="nav">
+    <ul>
+      <li><a href="../casa_de_fe.html">Inicio</a></li>
+      <li><a href="evento.html">Evento</a></li>
+      <li><a href="cursos.html">Cursos</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="ofrenda.html" class="activo">Ofrenda</a></li>
+    </ul>
+  </nav>
     </header>
 
-    <main class="centrar">
-        <section class="intro">
-            <h2>Apoya el trabajo de la iglesia con tu donación</h2>
-            <p class="subtitle">Tu contribución es segura y ayuda a continuar nuestra labor espiritual y social.</p>
-        </section>
-        <form id="donation-form" class="donation-form" novalidate>
-            <fieldset>
-                <legend>Información personal</legend>
-                <label for="nombre">Nombre completo</label>
-                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo" />
 
-                <label for="email">Correo electrónico</label>
-                <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com" />
-            </fieldset>
 
-            <fieldset>
-                <legend>Detalles de la donación</legend>
-                <label for="monto">Monto a donar S/.</label>
-                <input type="number" id="monto" name="monto" min="1" step="0.01" required placeholder="Ej. 50.00" />
 
-                <label for="metodo">Método de pago</label>
-                <select id="metodo" name="metodo" required>
-                    <option value="" disabled selected>Seleccione un método</option>
-                    <option value="tarjeta">Tarjeta de crédito/débito</option>
-                    <option value="paypal">Yape</option>
-                    <option value="transferencia">Plin</option>
-                </select>
-                <div class="qr-container">
-                    <div class="qr-item">
-                        <p class="qr-title">Yape</p>
-                        <img src="../img/qrplin.jpg" alt="QR Yape" />
-                    </div>
-                    <div class="qr-item">
-                        <p class="qr-title">Plin</p>
-                        <img src="../img/qrplin.jpg" alt="QR Plin" />
-                    </div>
-                </div>
-                <label for="mensaje">Mensaje (opcional)</label>
-                <textarea id="mensaje" name="mensaje" rows="3" placeholder="Escribe un mensaje..."></textarea>
-            </fieldset>
-            <button type="submit" class="btn-submit">Donar ahora</button>
-        </form>
-        <div id="mensaje-confirmacion" class="mensaje-confirmacion oculto">
-            <p>¡Gracias por tu generosidad! Tu donación ha sido recibida con éxito.</p>
-            <a href="donacion.html" class="btn-primary">Realizar otra donación</a>
+
+    <main class="donacion-main">
+    <section class="donacion-intro">
+      <h2 class="donacion-titulo">Apoya el trabajo de la iglesia<br>con tu donación</h2>
+      <p class="donacion-subtitulo">
+        Tu contribución es segura y ayuda a continuar nuestra labor espiritual y social
+      </p>
+    </section>
+
+    <section class="donacion-grid">
+      <!-- Columna PLIN -->
+      <div class="donacion-col">
+        <h3 class="donacion-col-titulo">PLIN</h3>
+        <img src="../img/plin_img.jpg" alt="Plin" class="donacion-logo-metodo" />
+        <img src="../img/qrplin.jpg" alt="QR Plin" class="donacion-qr" />
+        <p class="donacion-telefono"><strong>Teléfono:</strong> 999999999</p>
+        <p class="donacion-nota">Puedes enviar tu voucher o constancia a 
+          <a href="mailto:finanzas@casadefe.com">pastor@casadefe.com</a>
+        </p>
+      </div>
+
+      <!-- Columna YAPE -->
+      <div class="donacion-col">
+        <h3 class="donacion-col-titulo">YAPE</h3>
+        <img src="../img/yape_img.jpg" alt="Yape" class="donacion-logo-metodo" />
+        <img src="../img/qrplin.jpg" alt="QR Yape" class="donacion-qr" />
+        <p class="donacion-telefono"><strong>Teléfono:</strong> 999999999</p>
+        <p class="donacion-nota">Puedes enviar tu voucher o constancia a 
+          <a href="mailto:finanzas@casadefe.com">pastor@casadefe.com</a>
+        </p>
+      </div>
+
+      <!-- Columna Transferencia -->
+      <div class="donacion-col">
+        <h3 class="donacion-col-titulo">Dar vía transferencia</h3>
+
+        <div class="donacion-cuenta">
+          <p><strong>Cta. Corriente en S/ (BCP)</strong><br>
+          000-000000000-1<br>
+          CCI: 000-000-000000000000-01</p>
         </div>
 
+        <div class="donacion-cuenta">
+          <p><strong>Cta. Corriente en US$ (BCP)</strong><br>
+          000-000000000-1<br>
+          CCI: 000-000-000000000000-01</p>
+        </div>
 
-    </main>
+        <div class="donacion-cuenta">
+          <p><strong>Cta. Corriente en S/ (BBVA)</strong><br>
+          000-000000000-1<br>
+          CCI: 000-000-000000000000-01</p>
+        </div>
 
-    <footer>
-        <!-- pie de pagina -->
+        <div class="donacion-cuenta">
+          <p><strong>Cta. Corriente en US$ (BBVA)</strong><br>
+          000-000000000-1<br>
+          CCI: 000-000-000000000000-01</p>
+        </div>
 
-    </footer>
+        <div class="donacion-cuenta">
+          <p><strong>Cta. Corriente en S/ (SCOTIABANK)</strong><br>
+          000-000000000-1<br>
+          CCI: 000-000-000000000000-01</p>
+        </div>
+
+        <div class="donacion-cuenta">
+          <p><strong>Cta. Corriente en US$ (SCOTIABANK)</strong><br>
+          000-000000000-1<br>
+          CCI: 000-000-000000000000-01</p>
+        </div>
+
+        <p class="donacion-nota">Puedes enviar tu voucher o constancia a 
+          <a href="mailto:finanzas@casadefe.com">pastor@casadefe.com</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+    <footer class="footer">
+    <div class="footer-container">
+        <!-- Columna 1 -->
+        <div class="footer-col">
+            <h4>Casa de Fe</h4>
+            <p>
+                Somos una Iglesia de Puertas Abiertas en Chimbote, comprometida con la comunidad. 
+                Vivimos una fe basada en la Biblia, con Jesús como fundamento, alejados de la religiosidad y el legalismo.
+            </p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <!-- Columna 2 -->
+        <div class="footer-col">
+            <h4>Navegación</h4>
+            <ul>
+                <li><a href="casa_de_fe.html">Inicio</a></li>
+                <li><a href="./paginas/evento.html">Evento</a></li>
+                <li><a href="./paginas/cursos.html">Cursos</a></li>
+                <li><a href="./paginas/contacto.html">Contacto</a></li>
+                <li><a href="./paginas/ofrenda.html">Ofrenda</a></li>
+            </ul>
+        </div>
+
+        <!-- Columna 3 -->
+        <div class="footer-col">
+            <h4>Acerca de</h4>
+            <ul>
+                <li><a href="#mision">Misión</a></li>
+                <li><a href="#vision">Visión</a></li>
+                <li><a href="#valores">Valores</a></li>
+                <li><a href="#equipo">Nuestro Equipo</a></li>
+                <li><a href="#iglesia">Nuestra Iglesia</a></li>
+            </ul>
+        </div>
+
+        <!-- Columna 4 -->
+        <div class="footer-col">
+            <h4>Contacto</h4>
+            <ul class="contact-info">
+                <li><i class="fas fa-phone"></i> +51 910 794 631</li>
+                <li><i class="fas fa-envelope"></i> mail@casadefe.com</li>
+                <li><i class="fas fa-location-arrow"></i> Chimbote, Perú</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Casa de Fe | <a href="#">Política de privacidad</a></p>
+    </div>
+</footer>
+
     
 </body>
 

@@ -9,24 +9,33 @@
 
   <link rel="stylesheet" href="../css/inicio.css" />
   <link rel="stylesheet" href="../css/evento.css" />
+  <link rel="stylesheet" href="../css/footer.css"/>
+  <link rel="stylesheet" href="../css/header.css">
 
 </head>
 
 <body>
-  <header>
-    <div class="logo-container">
-      <img src="../img/Logo.png" alt="Logo" class="logo">
-      <h1>Casa de Fe</h1>
-    </div>
+  <header class="site-header">
+          <div class="header-inner">
+       <a class="brand" href="casa_de_fe.html">
+            <div class="logo-container">
+                <img src="../img/Logo.png" alt="Logo" class="logo">
+                <h1>Casa de Fe</h1>
+            </div>
+        </a>
 
-     <nav id="main-nav">
-    <a href="../casa_de_fe.html">Inicio</a>
-    <a href="evento.html" class="activo">Evento</a>
-    <a href="cursos.html">Cursos</a>
-    <a href="contacto.html">Contacto</a>
-    <a href="ofrenda.html">Ofrenda</a>
+        <!-- Banner -->
+
+        <nav id="site-nav" class="nav">
+    <ul>
+      <li><a href="../casa_de_fe.html">Inicio</a></li>
+      <li><a href="evento.html">Evento</a></li>
+      <li><a href="cursos.html">Cursos</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="ofrenda.html" class="activo">Ofrenda</a></li>
+    </ul>
   </nav>
-  </header>
+    </header>
 
   <main class="centrar">
     <h2 style="margin-bottom:20px;">Calendario de Eventos</h2>
@@ -51,6 +60,63 @@
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
   <!-- Tu archivo JS externo -->
   <script src="../js/evento.js"></script>
+  <footer class="footer">
+    <div class="footer-container">
+        <!-- Columna 1 -->
+        <div class="footer-col">
+            <h4>Casa de Fe</h4>
+            <p>
+                Somos una Iglesia de Puertas Abiertas en Chimbote, comprometida con la comunidad. 
+                Vivimos una fe basada en la Biblia, con Jesús como fundamento, alejados de la religiosidad y el legalismo.
+            </p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <!-- Columna 2 -->
+        <div class="footer-col">
+            <h4>Navegación</h4>
+            <ul>
+                <li><a href="casa_de_fe.html">Inicio</a></li>
+                <li><a href="./paginas/evento.html">Evento</a></li>
+                <li><a href="./paginas/cursos.html">Cursos</a></li>
+                <li><a href="./paginas/contacto.html">Contacto</a></li>
+                <li><a href="./paginas/ofrenda.html">Ofrenda</a></li>
+            </ul>
+        </div>
+
+        <!-- Columna 3 -->
+        <div class="footer-col">
+            <h4>Acerca de</h4>
+            <ul>
+                <li><a href="#mision">Misión</a></li>
+                <li><a href="#vision">Visión</a></li>
+                <li><a href="#valores">Valores</a></li>
+                <li><a href="#equipo">Nuestro Equipo</a></li>
+                <li><a href="#iglesia">Nuestra Iglesia</a></li>
+            </ul>
+        </div>
+
+        <!-- Columna 4 -->
+        <div class="footer-col">
+            <h4>Contacto</h4>
+            <ul class="contact-info">
+                <li><i class="fas fa-phone"></i> +51 910 794 631</li>
+                <li><i class="fas fa-envelope"></i> mail@casadefe.com</li>
+                <li><i class="fas fa-location-arrow"></i> Chimbote, Perú</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Casa de Fe | <a href="#">Política de privacidad</a></p>
+    </div>
+</footer>
+
 </body>
 
 </html>

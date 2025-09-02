@@ -87,3 +87,8 @@
 .btn-info:hover {
   background-color: #2c3e5c;
 }
+.centrar h2 {
+  text-align: center;
+  color: #1d2a41;
+   font-family: "Georgia", serif;
+}

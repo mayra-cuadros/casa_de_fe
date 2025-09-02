@@ -1,6 +1,7 @@
 /* --- 1. Reset & estructura base --- */
 html,
 body {
+     font-family: "Georgia", serif;
     height: 100%;
     margin: 0;
     display: flex;
@@ -67,6 +68,28 @@ nav a {
 nav a:hover {
     color: #78ac7e;
 }
+/* --- Responsivo --- */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        flex-direction: column;
+        background: #34445c;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    .nav.show {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+}
+
 
 /* --- 4. Contenedor de Versículo --- */
 .container-versiculo {

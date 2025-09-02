@@ -1,3 +1,7 @@
+/* ================================
+   GALERÍA DE IMÁGENES
+   ================================ */
+
 #galeria {
   max-width: 1100px;          /* limita el ancho total */
   margin: 0 auto;             /* centra la galería */
@@ -7,7 +11,7 @@
   gap: 14px;
 }
 
-/* Miniaturas: no recortar logos */
+/* Miniaturas (se mantienen cuadradas sin deformar) */
 #galeria img {
   width: 100%;
   height: 100%;
@@ -16,7 +20,7 @@
   background: #fff;
   border: 1px solid #e6e9ef;
   border-radius: 12px;
-  padding: 10px;              /* marco alrededor del logo */
+  padding: 10px;              /* marco alrededor de la imagen */
   box-shadow: 0 2px 8px rgba(0,0,0,.06);
   display: block;
   cursor: zoom-in;
@@ -68,4 +72,44 @@
 @media (max-width: 600px) {
   #galeria { gap: 8px; }
   #lightbox-close { width: 40px; height: 40px; }
+}
+
+/* ================================
+   AJUSTE UNIFORME DE TAMAÑO
+   ================================ */
+
+/* Contenedor de cada imagen para forzar tamaño uniforme */
+.galeria-item {
+  width: 100%;
+  aspect-ratio: 1 / 1;      /* mantiene todas cuadradas */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;         /* evita desbordes */
+}
+
+/* Imágenes dentro del contenedor */
+.galeria-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;        /* se ajustan al cuadrado llenando todo */
+}
+
+/* Contenedor de la sección de galería */
+.seccion-galeria {
+  text-align: center;   /* centra todo el texto dentro */
+  margin-bottom: 20px;  /* espacio debajo de los textos */
+}
+
+/* Estilo del título */
+.titulo-galeria {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* Estilo del subtítulo */
+.subtitulo-galeria {
+  font-size: 1.2rem;
+  color: #555;
 }

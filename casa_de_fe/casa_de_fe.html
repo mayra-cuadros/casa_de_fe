@@ -6,25 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
     <link rel="stylesheet" href="./css/inicio.css" />
-    <link rel="stylesheet" href="./css/galeria.css">
-    <link rel="stylesheet" href="./css/mision.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
     
+    <link rel="stylesheet" href="./css/mision.css">
+    <link rel="stylesheet" href="./css/equipo.css">
+    <link rel="stylesheet" href="./css/compromiso.css">
+    <link rel="stylesheet" href="./css/galeria.css">
 
     <link rel="icon" href="./img/cdf2.png" type="image/png">
 
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="./img/Logo.png" alt="Logo" class="logo">
-            <h1>Casa de Fe</h1>
-        </div>
+    <header class="site-header">
+          <div class="header-inner">
+        <a class="brand" href="casa_de_fe.html">
+            <div class="logo-container">
+                <img src="./img/Logo.png" alt="Logo" class="logo">
+                <h1>Casa de Fe</h1>
+            </div>
+        </a>
 
         <!-- Banner -->
 
         <!-- Menu principal  Adriano-->
-        <nav>
+         <nav id="site-nav" class="nav">
             <!-- logo Adriano-->
             <a href="casa_de_fe.html">Inicio</a>
             <!-- Consultar calendarios de eventos Karen-->
@@ -35,7 +44,6 @@
             <a href="./paginas/contacto.html">Contacto</a>
             <!-- Donación segura desde la web Adrian-->
             <a href="./paginas/ofrenda.html">Ofrenda</a>
-
         </nav>
     </header>
 
@@ -52,93 +60,161 @@
 
 
         <!-- Misión, visión y valores visibles Adrian-->
-                <div class="mision-seccion">
+        <div class="mv-alt-rows">
 
-        <section class="mision-bloque">
-            <h2>Compromiso Espiritual y Social</h2>
-            <p>
-            En Casa de Fe, vivimos conforme a los principios bíblicos, apoyando a nuestra comunidad a través de
-            actividades espirituales y sociales.
-            </p>
-        </section>
+            <!-- Misión (card → imagen) -->
+            <div class="mv-row" id="mision">
+                <article class="mv-card">
+                    <h3>Misión</h3>
+                    <p>Honrar y difundir su palabra, ayudando a las personas a fortalecer su fe y vivir conforme a los
+                        principios
+                        bíblicos.</p>
+                </article>
+                <figure class="mv-media">
+                    <img src="./img/mision.jpg" alt="Imagen Misión" loading="lazy" decoding="async">
+                </figure>
+            </div>
 
-        <section class="mision-bloque">
-            <p>
-            Nuestro compromiso incluye la enseñanza constante, la oración en comunidad y la participación activa
-            en proyectos que benefician a quienes nos rodean.
-            </p>
-            <p>
-            Valoramos la unidad, el amor y el servicio como pilares fundamentales para crecer juntos en la fe y
-            en la acción social.
-            </p>
-        </section>
+            <!-- Visión (imagen → card) -->
+            <div class="mv-row" id="vision">
+                <figure class="mv-media">
+                    <img src="./img/vision.webp" alt="Imagen Visión" loading="lazy" decoding="async">
+                </figure>
+                <article class="mv-card">
+                    <h3>Visión</h3>
+                    <p>Ser una comunidad espiritual unida que refleje el amor de Cristo y promueva el crecimiento
+                        espiritual y
+                        social de sus miembros.</p>
+                </article>
+            </div>
 
-        <section class="mision-bloque">
-            
-            <p class="mision-subtitulo">CREADOS PARA ADORAR NACIDOS PARA SERVIR</p>
-        </section>
-
-        <section class="mision-bloque">
-            <article class="mision-card">
-            <h3>Misión</h3>
-            <p>
-                Honrar y difundir su palabra, ayudando a las personas a fortalecer su fe y vivir conforme a los
-                principios bíblicos.
-            </p>
-            </article>
-
-            <article class="mision-card">
-            <h3>Visión</h3>
-            <p>
-                Ser una comunidad espiritual unida que refleje el amor de Cristo y promueva el crecimiento
-                espiritual y social de sus miembros.
-            </p>
-            </article>
-
-            <article class="mision-card">
-            <h3>Valores</h3>
-            <ul>
-                <li>Fe y confianza</li>
-                <li>Amor y respeto mutuo</li>
-                <li>Compromiso con la verdad bíblica</li>
-                <li>Servicio a la comunidad</li>
-                <li>Integridad y humildad</li>
-            </ul>
-            </article>
-        </section>
+            <!-- Valores (card → imagen) -->
+            <div class="mv-row" id="valores">
+                <article class="mv-card">
+                    <h3>Valores</h3>
+                    <ul>
+                        <li>Fe y confianza</li>
+                        <li>Amor y respeto mutuo</li>
+                        <li>Compromiso con la verdad bíblica</li>
+                        <li>Servicio a la comunidad</li>
+                        <li>Integridad y humildad</li>
+                    </ul>
+                </article>
+                <figure class="mv-media">
+                    <img src="./img/valores.jpg" alt="Imagen Valores" loading="lazy" decoding="async">
+                </figure>
+            </div>
 
         </div>
 
+        <section class="equipo" id="equipo">
+            <h2>Conoce a Nuestro Equipo</h2>
+            <div class="equipo-contenedor">
 
+                <!-- Pastor Principal -->
+                <div class="equipo-miembro">
+                    <img src="./img/pastor.jpg" alt="Pastor">
+                    <h3>Pr. Gustavo Martínez </h3>
+                    <p class="rol">Pastor Principal</p>
+                    <p class="descripcion">Descripcion</p>
+                </div>
 
-        <!-- Galería de Imágenes de la Iglesia adriano -->
-        <div id="lightbox" class="lb" hidden>
-            <button id="lightbox-close" class="lb-close" aria-label="Cerrar">x</button>
-            <img id="lightbox-img" alt="">
-        </div>
+                <!-- Líder 1 -->
+                <div class="equipo-miembro">
+                    <img src="./img/lider1.jpg" alt="Encargado 1">
+                    <h3>Nombre</h3>
+                    <p class="rol">Encargado 1</p>
+                    <p class="descripcion">Descripcion</p>
+                </div>
 
-        <!-- Script de galería -->
-        <script src="../casa_de_fe/js/galeria.js"></script>
-        <section>
-            <h2>Galería</h2>
-            <div id="galeria">
-                <img src="./img/cdf1.png" alt="CDF 1">
-                <img src="./img/cdf2.png" alt="CDF 2">
-                <img src="./img/cdf3.png" alt="CDF 3">
-                <img src="./img/Logo.png" alt="Logo Casa de Fe">
+                <!-- Líder 2 -->
+                <div class="equipo-miembro">
+                    <img src="./img/lider2.jpg" alt="Encargado 2">
+                    <h3>Nombre</h3>
+                    <p class="rol">Encargado 2</p>
+                    <p class="descripcion">Descripcion</p>
+                </div>
+
             </div>
         </section>
 
 
-        <!-- Script de galería -->
-        <script src="./js/galeria.js"></script>
+
+        <!-- Galería de Imágenes de la Iglesia -->
+        <section class="seccion-galeria" id="iglesia">
+            <h2 class="titulo-galeria"> Nuestra Iglesia </h2>
+            <p class="subtitulo-galeria">Momentos de fe, unión y esperanza en Casa de Fe</p>
+
+            <div id="galeria">
+                <div class="galeria-item"><img src="./img/galeria1.jpeg" alt="Celebración en la iglesia"></div>
+                <div class="galeria-item"><img src="./img/galeria2.jpeg" alt="Culto dominical"></div>
+                <div class="galeria-item"><img src="./img/galeria3.jpeg" alt="Actividades con la comunidad"></div>
+                <div class="galeria-item"><img src="./img/galeria4.jpeg" alt="Logo Casa de Fe"></div>
+            </div>
+        </section>
+
 
     </main>
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Columna 1 -->
+        <div class="footer-col">
+            <h4>Casa de Fe</h4>
+            <p>
+                Somos una Iglesia de Puertas Abiertas en Chimbote, comprometida con la comunidad. 
+                Vivimos una fe basada en la Biblia, con Jesús como fundamento, alejados de la religiosidad y el legalismo.
+            </p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
 
-    <footer>
-        <!-- pie de pagina -->
+        <!-- Columna 2 -->
+        <div class="footer-col">
+            <h4>Navegación</h4>
+            <ul>
+                <li><a href="casa_de_fe.html">Inicio</a></li>
+                <li><a href="./paginas/evento.html">Evento</a></li>
+                <li><a href="./paginas/cursos.html">Cursos</a></li>
+                <li><a href="./paginas/contacto.html">Contacto</a></li>
+                <li><a href="./paginas/ofrenda.html">Ofrenda</a></li>
+            </ul>
+        </div>
 
-    </footer>
+        <!-- Columna 3 -->
+        <div class="footer-col">
+            <h4>Acerca de</h4>
+            <ul>
+                <li><a href="#mision">Misión</a></li>
+                <li><a href="#vision">Visión</a></li>
+                <li><a href="#valores">Valores</a></li>
+                <li><a href="#equipo">Nuestro Equipo</a></li>
+                <li><a href="#iglesia">Nuestra Iglesia</a></li>
+            </ul>
+        </div>
+
+        <!-- Columna 4 -->
+        <div class="footer-col">
+            <h4>Contacto</h4>
+            <ul class="contact-info">
+                <li><i class="fas fa-phone"></i> +51 910 794 631</li>
+                <li><i class="fas fa-envelope"></i> mail@casadefe.com</li>
+                <li><i class="fas fa-location-arrow"></i> Chimbote, Perú</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Casa de Fe | <a href="#">Política de privacidad</a></p>
+    </div>
+</footer>
+
+
+    <!-- Scripts -->
+    <script src="./js/header.js"></script>
 </body>
 
 </html>
