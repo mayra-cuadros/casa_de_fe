@@ -1,8 +1,27 @@
 /* ===== Header ===== */
+@font-face {
+  font-family: 'AvenirNextLTPro';
+  src: url('./fonts/AvenirNextLTPro-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AvenirNextLTPro';
+  src: url('./fonts/AvenirNextLTPro-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+.site-header nav a {
+  font-family: 'AvenirNextLTPro', Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
 .site-header{
   background:#1d2a41; /* azul oscuro */
   color:#fff;
-  box-shadow:0 2px 8px rgba(0,0,0,.15);
+  box-shadow:0 2px 8px rgba(128, 118, 118, 0.15);
 }
 .site-header .header-inner{
   max-width: 1200px;
