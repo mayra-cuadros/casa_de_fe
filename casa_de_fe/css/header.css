@@ -19,7 +19,7 @@
   letter-spacing: 0.5px;
 }
 .site-header{
-  background:#1d2a41; /* azul oscuro */
+  background:#1d2a41; /* azul */
   color:#fff;
   box-shadow:0 2px 8px rgba(128, 118, 118, 0.15);
 }
@@ -100,4 +100,28 @@
     border-top:1px solid rgba(255,255,255,.15);
   }
   .site-header nav.show{ display:flex; }
+}
+/* Para la altura del header */
+.site-header .header-inner {
+  height: 70px; /* fija la altura del header */
+  display: flex;
+  align-items: center; 
+}
+
+/* para el logo altura*/
+.site-header .brand .logo {
+  max-height: 100%; /* ocupa solo la altura disponible del header */
+  width: auto;
+  height: 70px; 
+  margin-left: -34px;
+  object-fit: contain;
+}
+
+/* Header de evento y contacto */
+.verdec-page .site-header {
+  background: #37F670; /* verdee */
+}
+
+.rojo-page .site-header {
+  background: #FF542E; /* verdee */
 }
