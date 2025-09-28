@@ -1,8 +1,9 @@
 .footer {
-  background-color: #34445c;
+  background-color: #34445c; /* Color base si no hay tema */
   color: #fff;
   padding: 40px 20px;
   font-family: Arial, sans-serif;
+  transition: background-color 0.5s ease; /* Transición suave */
 }
 
 .footer-container {
@@ -56,4 +57,30 @@
 .footer-bottom {
   text-align: center;
   margin-top: 30px;
+}
+
+/* === Temas dinámicos (Header + Footer) === */
+body.theme-blue .site-header,
+body.theme-blue .footer {
+  background-color: #0056d2 !important; /* Azul */
+  color: #fff !important;
+}
+
+body.theme-red .site-header,
+body.theme-red .footer {
+  background-color: #c62828 !important; /* Rojo */
+  color: #fff !important;
+}
+
+body.theme-green .site-header,
+body.theme-green .footer {
+  background-color: #2e7d32 !important; /* Verde */
+  color: #fff !important;
+}
+
+/* Enlaces legibles en todos los temas */
+.site-header a,
+.footer a {
+  color: inherit;
+  transition: color 0.3s ease;
 }

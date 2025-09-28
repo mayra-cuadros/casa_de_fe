@@ -125,3 +125,28 @@
 .rojo-page .site-header {
   background: #FF542E; /* verdee */
 }
+
+/* === Temas dinámicos === */
+body.theme-blue .site-header,
+body.theme-blue .footer {
+  background-color: #0056d2 !important; /* Azul */
+  color: #fff !important;
+}
+
+body.theme-red .site-header,
+body.theme-red .footer {
+  background-color: #c62828 !important; /* Rojo */
+  color: #fff !important;
+}
+
+body.theme-green .site-header,
+body.theme-green .footer {
+  background-color: #2e7d32 !important; /* Verde */
+  color: #fff !important;
+}
+
+
+/* Que los enlaces sigan siendo legibles */
+.site-header a, .footer a {
+  color: inherit;
+}
