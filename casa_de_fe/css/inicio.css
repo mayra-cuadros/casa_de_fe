@@ -1,7 +1,7 @@
 /* --- 1. Reset & estructura base --- */
 html,
 body {
-     font-family: "Georgia", serif;
+    font-family: "Georgia", serif;
     height: 100%;
     margin: 0;
     display: flex;
@@ -13,7 +13,8 @@ body {
 
 /* --- 2. Header --- */
 header {
-    background: #34445c; /* Verde alternativo: #78ac7e */
+    background: #34445c;
+    /* Verde alternativo: #78ac7e */
     padding: 20px;
     text-align: center;
     box-shadow: 0 3px 8px rgba(0, 0, 0, .1);
@@ -68,6 +69,7 @@ nav a {
 nav a:hover {
     color: #78ac7e;
 }
+
 /* --- Responsivo --- */
 @media (max-width: 768px) {
     .nav {
@@ -141,6 +143,7 @@ button#nuevo-versiculo:hover {
         opacity: 0;
         transform: translateY(-10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -202,4 +205,81 @@ button#nuevo-versiculo:hover {
     }
 }
 
+/* --- 8. Sección de Próximos Eventos --- */
+.eventos-destacados {
+    max-width: 90%;
+    margin: 50px auto;
+    padding: 30px 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
 
+.titulo-eventos {
+    font-size: 2rem;
+    color: #1d2a41;
+    font-family: "Georgia", serif;
+    margin-bottom: 25px;
+}
+
+/* --- Estilo del Calendario --- */
+#calendar {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Encabezado del calendario */
+.fc .fc-toolbar-title {
+    color: #1d2a41;
+    font-weight: bold;
+}
+
+.fc .fc-button {
+    background-color: #1d2a41;
+    border: none;
+    color: white;
+    transition: background 0.3s;
+}
+
+.fc .fc-button:hover {
+    background-color: #2c3e5c;
+}
+
+/* Nombres de los días */
+.fc .fc-col-header-cell {
+    background-color: #1d2a41;
+    color: white;
+    font-weight: bold;
+}
+
+/* Evento */
+.fc-event {
+    background-color: #78ac7e;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    padding: 3px 5px;
+    font-size: 0.9rem;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .titulo-eventos {
+        font-size: 1.6rem;
+    }
+
+    #calendar {
+        padding: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo-eventos {
+        font-size: 1.4rem;
+    }
+}
