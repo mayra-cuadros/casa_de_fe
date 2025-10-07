@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/inicio.css" />
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
+
     <link rel="stylesheet" href="./css/mision.css">
     <link rel="stylesheet" href="./css/equipo.css">
     <link rel="stylesheet" href="./css/compromiso.css">
@@ -19,137 +20,143 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
+
 <body>
     <header class="site-header">
         <div class="header-inner">
             <a class="brand" href="casa_de_fe.html">
                 <img src="./img/logo-alterno.png" alt="Casa de Fe - CDF" class="logo">
             </a>
+            <!-- Banner -->
 
-            <!-- Menú principal -->
+            <!-- Menu principal  Adriano-->
             <nav id="site-nav" class="nav">
+                <!-- logo Adriano-->
                 <a href="casa_de_fe.html">Inicio</a>
+                <!-- Consultar calendarios de eventos Karen-->
                 <a href="./paginas/evento.html">Evento</a>
+                <!-- Reseña de Experiencia del Curso caleb -->
                 <a href="./paginas/cursos.html">Cursos</a>
+                <!-- Inscripción a cursos de la Iglesia Karen-->
                 <a href="./paginas/contacto.html">Contacto</a>
+                <!-- Donación segura desde la web Adrian-->
                 <a href="./paginas/ofrenda.html">Ofrenda</a>
             </nav>
-        </div>
     </header>
 
     <main class="centrar">
-        <!-- Versículo Bíblico -->
+        <!-- Versículo Bíblico Tatiana -->
         <div class="container-versiculo">
             <div class="versiculo-texto" id="versiculo-texto"></div>
             <div class="versiculo-datos" id="versiculo-datos"></div>
+            <!-- <button id="nuevo-versiculo">Mostrar otro versículo</button> -->
         </div>
 
         <script src="./js/versiculo.js"></script>
 
-        <!-- Sección de Próximos Eventos -->
-        <section class="eventos-destacados">
-            <h2 class="titulo-eventos">Próximos eventos de este mes</h2>
-
-            <div id="calendar"></div>
-        </section>
-
-        <!-- Scripts de FullCalendar -->
-        <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const calendarEl = document.getElementById('calendar');
-                const calendar = new FullCalendar.Calendar(calendarEl, {
-                    initialView: 'dayGridMonth',
-                    locale: 'es',
-                    height: 'auto',
-                    headerToolbar: {
-                        left: 'prev,next today',
-                        center: 'title',
-                        right: ''
-                    },
-                    events: [
-                        { title: 'Servicio Dominical', start: '2025-09-28' },
-                        { title: 'Reunión de Jóvenes', start: '2025-09-30' },
-                        { title: 'Matrimonio Comunitario', start: '2025-09-27' }
-                    ],
-                    eventClick: function (info) {
-                        alert('Evento: ' + info.event.title);
-                    }
-                });
-                calendar.render();
-            });
-        </script>
 
 
-        <!-- Misión, Visión y Valores -->
-        <div class="mv-alt-rows">
-            <div class="mv-row" id="mision">
-                <article class="mv-card">
-                    <h3>Misión</h3>
-                    <p>Honrar y difundir su palabra, ayudando a las personas a fortalecer su fe y vivir conforme a los
-                        principios bíblicos.</p>
-                </article>
-                <figure class="mv-media">
-                    <img src="./img/mision.jpg" alt="Imagen Misión" loading="lazy" decoding="async">
-                </figure>
-            </div>
+        <section class="mv-container">
+  <!-- Misión, visión y valores -->
+  <div class="mv-alt-rows">
 
-            <div class="mv-row" id="vision">
-                <figure class="mv-media">
-                    <img src="./img/vision.webp" alt="Imagen Visión" loading="lazy" decoding="async">
-                </figure>
-                <article class="mv-card">
-                    <h3>Visión</h3>
-                    <p>Ser una comunidad espiritual unida que refleje el amor de Cristo y promueva el crecimiento
-                        espiritual y social de sus miembros.</p>
-                </article>
-            </div>
+    <!-- Misión (card → imagen) -->
+    <div class="mv-row" id="mision">
+      <article class="mv-card">
+        <h3>Misión</h3>
+        <p>
+          Honrar y difundir su palabra, ayudando a las personas a fortalecer su fe y vivir conforme a los principios bíblicos.
+        </p>
+      </article>
+      <figure class="mv-media">
+        <img src="./img/mision.jpg" alt="Imagen Misión" loading="lazy" decoding="async">
+      </figure>
+    </div>
 
-            <div class="mv-row" id="valores">
-                <article class="mv-card">
-                    <h3>Valores</h3>
-                    <ul>
-                        <li>Fe y confianza</li>
-                        <li>Amor y respeto mutuo</li>
-                        <li>Compromiso con la verdad bíblica</li>
-                        <li>Servicio a la comunidad</li>
-                        <li>Integridad y humildad</li>
-                    </ul>
-                </article>
-                <figure class="mv-media">
-                    <img src="./img/valores.jpg" alt="Imagen Valores" loading="lazy" decoding="async">
-                </figure>
-            </div>
+    <!-- Visión (imagen → card) -->
+    <div class="mv-row" id="vision">
+      <figure class="mv-media">
+        <img src="./img/vision.webp" alt="Imagen Visión" loading="lazy" decoding="async">
+      </figure>
+      <article class="mv-card">
+        <h3>Visión</h3>
+        <p>
+          Ser una comunidad espiritual unida que refleje el amor de Cristo y promueva el crecimiento espiritual y social de sus miembros.
+        </p>
+      </article>
+    </div>
+
+    <!-- Valores (card → imagen) -->
+    <div class="mv-row" id="valores">
+      <article class="mv-card">
+        <h3>Valores</h3>
+        <ul>
+          <li>Fe y confianza</li>
+          <li>Amor y respeto mutuo</li>
+          <li>Compromiso con la verdad bíblica</li>
+          <li>Servicio a la comunidad</li>
+          <li>Integridad y humildad</li>
+        </ul>
+      </article>
+      <figure class="mv-media">
+        <img src="./img/valores.jpg" alt="Imagen Valores" loading="lazy" decoding="async">
+      </figure>
+    </div>
+  </div>
+
+  <!-- Columna lateral de eventos -->
+  <aside class="eventos-lateral">
+    <h3>Eventos importantes</h3>
+    <ul>
+      <li>Retiro espiritual – 15 de octubre</li>
+      <li>Jornada de oración – 22 de octubre</li>
+      <li>Estudio bíblico – 5 de noviembre</li>
+      <li>Convivencia familiar – 20 de noviembre</li>
+    </ul>
+  </aside>
+</section>
+
+
+
+
         </div>
 
-        <!-- Equipo -->
         <section class="equipo" id="equipo">
             <h2>Conoce a Nuestro Equipo</h2>
             <div class="equipo-contenedor">
+
+                <!-- Pastor Principal -->
                 <div class="equipo-miembro">
                     <img src="./img/pastor.jpg" alt="Pastor">
-                    <h3>Pr. Gustavo Martínez</h3>
+                    <h3>Pr. Gustavo Martínez </h3>
                     <p class="rol">Pastor Principal</p>
-                    <p class="descripcion">Descripción</p>
+                    <p class="descripcion">Descripcion</p>
                 </div>
+
+                <!-- Líder 1 -->
                 <div class="equipo-miembro">
                     <img src="./img/lider1.jpg" alt="Encargado 1">
                     <h3>Nombre</h3>
                     <p class="rol">Encargado 1</p>
-                    <p class="descripcion">Descripción</p>
+                    <p class="descripcion">Descripcion</p>
                 </div>
+
+                <!-- Líder 2 -->
                 <div class="equipo-miembro">
                     <img src="./img/lider2.jpg" alt="Encargado 2">
                     <h3>Nombre</h3>
                     <p class="rol">Encargado 2</p>
-                    <p class="descripcion">Descripción</p>
+                    <p class="descripcion">Descripcion</p>
                 </div>
+
             </div>
         </section>
 
-        <!-- Galería -->
+
+
+        <!-- Galería de Imágenes de la Iglesia -->
         <section class="seccion-galeria" id="iglesia">
-            <h2 class="titulo-galeria">Nuestra Iglesia</h2>
+            <h2 class="titulo-galeria"> Nuestra Iglesia </h2>
             <p class="subtitulo-galeria">Momentos de fe, unión y esperanza en Casa de Fe</p>
 
             <div id="galeria">
@@ -159,14 +166,19 @@
                 <div class="galeria-item"><img src="./img/galeria4.jpeg" alt="Logo Casa de Fe"></div>
             </div>
         </section>
-    </main>
 
+
+    </main>
     <footer class="footer">
         <div class="footer-container">
+            <!-- Columna 1 -->
             <div class="footer-col">
                 <h4>Casa de Fe</h4>
-                <p>Somos una Iglesia de Puertas Abiertas en Chimbote, comprometida con la comunidad. Vivimos una fe
-                    basada en la Biblia, con Jesús como fundamento, alejados de la religiosidad y el legalismo.</p>
+                <p>
+                    Somos una Iglesia de Puertas Abiertas en Chimbote, comprometida con la comunidad.
+                    Vivimos una fe basada en la Biblia, con Jesús como fundamento, alejados de la religiosidad y el
+                    legalismo.
+                </p>
                 <div class="social-icons">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
@@ -175,6 +187,7 @@
                 </div>
             </div>
 
+            <!-- Columna 2 -->
             <div class="footer-col">
                 <h4>Navegación</h4>
                 <ul>
@@ -186,6 +199,7 @@
                 </ul>
             </div>
 
+            <!-- Columna 3 -->
             <div class="footer-col">
                 <h4>Acerca de</h4>
                 <ul>
@@ -197,6 +211,7 @@
                 </ul>
             </div>
 
+            <!-- Columna 4 -->
             <div class="footer-col">
                 <h4>Contacto</h4>
                 <ul class="contact-info">
@@ -212,7 +227,11 @@
         </div>
     </footer>
 
+
+    <!-- Scripts -->
     <script src="./js/header.js"></script>
+
+
 </body>
 
 </html>
