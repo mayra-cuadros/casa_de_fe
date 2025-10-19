@@ -1,33 +1,227 @@
-.curso-pendiente {
+
+/* Botón */
+.btn {
+  padding: 0.6rem 1.2rem;
+  background-color: #000;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 100;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #333;
+}
+
+/* Banner */
+.banner img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  padding: 5px;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+}
+
+section {
+  padding: 2rem 0;
+}
+
+.cursos h2,
+.instructores h2,
+.comentarios h2 {
+  margin-bottom: 2rem;
+  font-size: 2.8rem;
+  font-weight: 500;
+  text-align: center;
+  color: #0e30a3;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.cursos h2::after,
+.instructores h2::after,
+.comentarios h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 5px;
+  background-color: #0e30a3;
+  margin: 0.5rem auto 0;
+  border-radius: 3px;
+}
+
+/* Cursos */
+
+.cursos {
+  margin-bottom: 5rem;
+  padding: 0 1rem; 
+  width: 100%;
+}
+
+.cursos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 2rem;
+  width: 100%;
+  margin: 0 auto;
+  justify-items: stretch;    
+}
+
+@media (max-width: 768px) {
+  .cursos-grid {
+    grid-template-columns: 1fr; 
+    max-width: 100%;
+  }
+}
+
+.curso-card {
+  width: 100%; 
+  max-width: 650px;
+  margin: 0 auto; 
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 1.5rem 1rem 2rem;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.curso-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.curso-card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.curso-card h3 {
+  margin: 0.6rem 0;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #333;
+}
+
+.curso-card p {
+  margin-bottom: 1.2rem;
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Instructores */
+
+.instructores-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  padding: 0 1rem;
+}
+
+@media (max-width: 1024px) {
+  .instructores-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .instructores-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.instructor-card {
+  text-align: center;
+  background-color: #fafafa;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.06);
+  transition: box-shadow 0.3s ease;
+}
+
+.instructor-card:hover {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.instructor-card img {
+  width: 250px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.instructor-card h3 {
+  font-weight: 700;
+  color: #2c2c2c;
+  margin-bottom: 0.3rem;
+}
+
+.instructor-card p {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* Comentarios */
+
+.comentarios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.comentario-card {
+  background-color: #fefefe;
+  padding: 1.5rem 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 70vh;
+  justify-content: space-between;
+  transition: box-shadow 0.3s ease;
+}
+
+.comentario-card:hover {
+  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+}
+
+.comentario-card blockquote {
+  font-style: italic;
   text-align: center;
-  background: #f4f6fa;
-  color: #1d2a41;
-  padding: 20px;
+  color: #444;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  quotes: "«" "»";
 }
 
-.curso-pendiente h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #34445c;
+.autor {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
-.curso-pendiente p {
-  font-size: 1.2rem;
-  color: #555;
+.autor img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
-.curso-pendiente h2, 
-.curso-pendiente p {
-  animation: fadeIn 1.2s ease-in-out;
+.autor strong {
+  color: #222;
+  font-weight: 700;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+.autor span {
+  color: #666;
+  font-size: 0.85rem;
 }
