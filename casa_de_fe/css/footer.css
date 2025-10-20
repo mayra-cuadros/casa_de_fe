@@ -62,19 +62,19 @@
 /* === Temas dinámicos (Header + Footer) === */
 body.theme-blue .site-header,
 body.theme-blue .footer {
-  background-color: #0056d2 !important; /* Azul */
+  background-color: #34445c !important; /* Azul */
   color: #fff !important;
 }
 
 body.theme-red .site-header,
 body.theme-red .footer {
-  background-color: #c62828 !important; /* Rojo */
+  background-color: #ce7064 !important; /* Rojo */
   color: #fff !important;
 }
 
 body.theme-green .site-header,
 body.theme-green .footer {
-  background-color: #2e7d32 !important; /* Verde */
+  background-color: #78ac7e !important; /* Verde */
   color: #fff !important;
 }
 
