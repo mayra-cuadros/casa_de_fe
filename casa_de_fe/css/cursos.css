@@ -56,9 +56,9 @@ section {
 /* Cursos */
 
 .cursos {
-  margin-bottom: 5rem;
-  padding: 0 1rem; 
-  width: 100%;
+  margin-bottom: 3rem;
+  padding: 5px; 
+  width: 97%;
 }
 
 .cursos-grid {

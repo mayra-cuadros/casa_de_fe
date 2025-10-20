@@ -1,0 +1,212 @@
+:root {
+  --text: #111;
+  --muted: #666;
+  --bg: #f5f5f5;
+  --white: #fff;
+  --shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  --radius: 12px;
+  --max-width: 1300px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 30px 40px 100px;
+}
+
+/* --- Acerca de --- */
+.about-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 70px;
+  align-items: start;
+  margin-bottom: 10px;
+}
+
+.about-text h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.about-text p {
+  font-size: 15px;
+  color: #222;
+  margin-bottom: 14px;
+  text-align: justify;
+}
+
+.about-img img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+/* --- Nivel Básico --- */
+.basic-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.basic-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 40px;
+  align-items: start;
+  min-width: 100%;
+}
+
+/* Imagen */
+.img-container {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Texto */
+.basic-content h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.text-block {
+  margin-bottom: 16px;
+}
+
+.text-block h4 {
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.text-block p {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* Botones */
+.buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.btn {
+  font-size: 14px;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+}
+
+.btn.primary {
+  background: var(--text);
+  color: var(--white);
+}
+
+.btn.secondary {
+  background: var(--white);
+  border: 1px solid #ccc;
+  color: var(--text);
+}
+
+/* Flechas */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 5;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+.arrow:hover {
+  background: var(--white);
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .about-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .basic-card {
+    grid-template-columns: 1fr;
+    padding: 30px;
+  }
+
+  .img-container {
+    height: 260px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-text h2 {
+    font-size: 26px;
+  }
+
+  .basic-title {
+    font-size: 20px;
+  }
+
+  .basic-content h3 {
+    font-size: 18px;
+  }
+}
