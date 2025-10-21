@@ -13,7 +13,7 @@ body {
 
 /* --- 2. Header --- */
 header {
-    background: #34445c; /* Verde alternativo: #78ac7e */
+    background: #34445c;
     padding: 20px;
     text-align: center;
     box-shadow: 0 3px 8px rgba(0, 0, 0, .1);
@@ -68,6 +68,7 @@ nav a {
 nav a:hover {
     color: #78ac7e;
 }
+
 /* --- Responsivo --- */
 @media (max-width: 768px) {
     .nav {
@@ -89,7 +90,6 @@ nav a:hover {
         display: block;
     }
 }
-
 
 /* --- 4. Contenedor de Versículo --- */
 .container-versiculo {
@@ -148,8 +148,6 @@ button#nuevo-versiculo:hover {
 }
 
 /* --- 7. Responsividad --- */
-
-/* Tablets */
 @media (max-width: 768px) {
     header {
         text-align: center;
@@ -176,7 +174,6 @@ button#nuevo-versiculo:hover {
     }
 }
 
-/* Celulares */
 @media (max-width: 480px) {
     .logo {
         width: 40px;
@@ -202,6 +199,165 @@ button#nuevo-versiculo:hover {
     }
 }
 
+/* ===== EVENTOS DEL MES ===== */
+.eventos-mes {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f5f9f7;
+}
 
+.eventos-mes h2 {
+  color: #008037;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
 
+.eventos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
 
+.evento-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  max-width: 250px;
+}
+
+.evento-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 128, 55, 0.2);
+}
+
+.icono-evento {
+  font-size: 40px;
+  color: #008037;
+  margin-bottom: 10px;
+}
+
+.evento-card h3 {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.evento-card p {
+  color: #555;
+}
+
+/* ===== MISIÓN, VISIÓN Y VALORES ===== */
+.mvv {
+  background-color: #ffffff;
+  padding: 80px 5%; /* ocupa casi todo el ancho */
+  text-align: center;
+  width: 100%;
+}
+
+.mvv h2 {
+  color: #008037;
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+}
+
+/* ===== SECCIÓN: MISIÓN, VISIÓN Y VALORES ===== */
+.mv-container {
+  max-width: 1400px; /* más ancho */
+  margin: 80px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.mv-alt-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.mv-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+/* Tarjeta de texto */
+.mv-card {
+  flex: 1;
+  text-align: left;
+  background-color: #f8faf8;
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.mv-card h3 {
+  font-size: 1.8rem;
+  color: #008037;
+  margin-bottom: 15px;
+}
+
+.mv-card p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.mv-card ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Imagen */
+.mv-media {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.mv-media img {
+  width: 100%;
+  max-width: 550px; /* más ancho */
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Alternar orden (imagen ↔ texto) */
+#vision {
+  flex-direction: row-reverse;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .mv-row {
+    flex-direction: column;
+    text-align: center;
+  }
+  #vision {
+    flex-direction: column;
+  }
+  .mv-card {
+    text-align: center;
+  }
+  .mv-media img {
+    max-width: 100%;
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .mvv-container {
+    grid-template-columns: 1fr; /* se vuelve una sola columna en móviles */
+  }
+
+  .mvv {
+    padding: 50px 25px;
+  }
+}
