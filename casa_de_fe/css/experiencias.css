@@ -1,0 +1,220 @@
+/* ===== Sección de Experiencias ===== */
+.experiencias {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+.experiencias .titulo-seccion {
+  font-size: clamp(24px, 3vw, 36px);
+  color: #1d2a41;
+  font-weight: 800;
+  text-align: center;
+  margin: 0 0 6px;
+}
+
+.experiencias .subtitulo-seccion {
+  text-align: center;
+  color: #6c7a92;
+  margin-bottom: 20px;
+}
+
+/* ===== Grid ===== */
+.experiencias-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1024px) {
+  .experiencias-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .experiencias-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== Tarjetas ===== */
+.experiencia-card {
+  background: #fff;
+  border: 1px solid #e8edf4;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.experiencia-card:hover {
+  transform: translateY(-4px);
+}
+
+/* ===== Media (imagen/video) ===== */
+.experiencia-card .media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f6fa;
+  aspect-ratio: 16 / 9;
+  padding: 10px;
+}
+
+.experiencia-card .media img,
+.experiencia-card .media video {
+  width: 90%;
+  height: auto !important;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* ===== Texto ===== */
+.experiencia-card .info {
+  padding: 14px 16px 24px;
+}
+
+.experiencia-card h3 {
+  margin: 0 0 6px;
+  color: #1d2a41;
+  font-size: 1.1rem;
+}
+
+.experiencia-card time {
+  display: block;
+  color: #6c7a92;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.experiencia-card p {
+  margin: 0 0 10px;
+  color: #2d3b52;
+  line-height: 1.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .experiencia-card {
+    transition: none;
+  }
+}
+/* ====== Más separación / respiración ====== */
+
+/* Más aire arriba/abajo de la sección */
+.experiencias {
+  margin: 56px auto;          /* antes 40px */
+  padding: 0 20px;            /* un pelín más */
+}
+
+/* Separación mayor entre título, subtítulo y la grilla */
+.experiencias .titulo-seccion { margin-bottom: 10px; }
+.experiencias .subtitulo-seccion { margin-bottom: 28px; } /* antes 20px */
+
+/* Gaps más generosos entre cards */
+.experiencias-grid { gap: 26px; }     /* antes 18px */
+@media (max-width: 1024px) {
+  .experiencias-grid { gap: 22px; }
+}
+@media (max-width: 640px) {
+  .experiencias-grid { gap: 18px; }
+}
+
+/* Más padding dentro de cada tarjeta */
+.experiencia-card .info {
+  padding: 18px 20px 28px;    /* antes 14px 16px 24px */
+}
+
+/* Más aire alrededor de la imagen/video dentro de la card */
+.experiencia-card .media {
+  padding: 14px;              /* antes 10px */
+  margin-bottom: 6px;         /* separa media del texto */
+}
+
+/* Sutilezas de lectura */
+.experiencia-card h3 { margin-bottom: 10px; }
+.experiencia-card time { margin-bottom: 10px; }
+
+/* Un borde/sombra un poquito más suave para que no “apriete” visualmente */
+.experiencia-card {
+  border-color: #eef2f7;
+  box-shadow: 0 8px 22px rgba(0,0,0,.06);
+}
+
+/* En móvil, añade aire lateral para que no “toque” los bordes */
+@media (max-width: 480px) {
+  .experiencias { padding: 0 22px; }
+}
+/* ====== Layout tipo "cards grandes" (2 cols + separación) ====== */
+
+/* ancho y respiración de la sección */
+.experiencias{
+  max-width: 1200px;
+  margin: 56px auto;        /* más aire arriba/abajo */
+  padding: 0 24px;          /* aire lateral */
+}
+
+/* 2 columnas en desktop, 1 en móvil, con gap generoso */
+.experiencias-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(340px, 1fr)); /* 2 cols como en la captura */
+  gap: 32px;                                           /* separación entre tarjetas */
+}
+@media (max-width: 900px){
+  .experiencias-grid{ grid-template-columns: 1fr; gap: 22px; }
+}
+
+/* tarjeta más “pro” */
+.experiencia-card{
+  background:#fff;
+  border: 1px solid #eef2f7;
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.06);
+  overflow: hidden;
+  transition: transform .25s ease;
+}
+.experiencia-card:hover{ transform: translateY(-3px); }
+
+/* MEDIA de altura fija (uniforme) tipo banner: */
+.experiencia-card .media{
+  height: clamp(220px, 30vw, 340px); /* controla el ALTO de la imagen/video */
+  border-radius: 12px;
+  margin: 18px 18px 12px;            /* separación interna respecto al borde */
+  overflow: hidden;
+  background: #f4f6fa;
+}
+
+/* la imagen/video llenan ese alto sin deformarse */
+.experiencia-card .media img,
+.experiencia-card .media video{
+  width: 100%;
+  height: 100% !important;
+  object-fit: cover;                 /* recorte elegante, como tu ejemplo */
+  display: block;
+  border-radius: 10px;
+}
+
+/* texto con más aire */
+.experiencia-card .info{
+  padding: 12px 20px 22px;
+  text-align: center;
+}
+.experiencia-card h3{ margin: 6px 0 8px; font-size: 1.08rem; color:#1d2a41; }
+.experiencia-card time{ display:block; color:#6c7a92; font-size:.92rem; margin-bottom:10px; }
+.experiencia-card p{ color:#2d3b52; line-height:1.55; margin:0 0 6px; }
+
+/* botón opcional más visible si lo usas */
+.experiencia-card .btn-ver{
+  margin-top: 8px;
+  background:#1d2a41; color:#fff; border:0; border-radius:10px;
+  padding:10px 14px; cursor:pointer; transition:background .2s, transform .2s;
+}
+.experiencia-card .btn-ver:hover{ background:#2c3e5c; transform: translateY(-1px); }
+
+/* en pantallas muy pequeñas, un poco más de aire lateral */
+@media (max-width: 480px){
+  .experiencias{ padding: 0 20px; }
+}
+
