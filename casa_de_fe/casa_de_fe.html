@@ -58,12 +58,6 @@
 
     <section class="mv-container">
 
-
-
-
-
-
-
       <!-- Misión, visión y valores -->
       <div class="mv-alt-rows">
 
@@ -120,33 +114,63 @@
 
     <!-- ====== MÓDULO DE EVENTOS DEL MES ====== -->
     <section class="eventos-mes">
-      <h2>Eventos del Mes</h2>
-      <div class="eventos-grid">
-        <div class="evento-card" data-info="Retiro Espiritual - 15 de octubre - 9:00 a.m. - Auditorio principal">
-          <i class="fa-solid fa-church icono-evento"></i>
-          <h3>Retiro Espiritual</h3>
-          <p>15 de octubre</p>
+      <div class="nota-eventos">
+        <div class="nota-header">
+          <h2>Eventos del Mes</h2>
+          <p>Descubre lo que tenemos preparado en Casa de Fe</p>
         </div>
 
-        <div class="evento-card" data-info="Jornada de Oración - 22 de octubre - 7:00 p.m. - Salón 2">
-          <i class="fa-solid fa-hands-praying icono-evento"></i>
-          <h3>Jornada de Oración</h3>
-          <p>22 de octubre</p>
-        </div>
+        <div class="nota-contenido">
+          <!-- Lista de eventos -->
+          <div class="lista-eventos">
+            <div class="evento-item">
+              <span class="fecha">15 Oct</span>
+              <div class="detalle">
+                <h3>Retiro Espiritual</h3>
+                <p>Auditorio principal • 9:00 a.m.</p>
+              </div>
+            </div>
 
-        <div class="evento-card" data-info="Estudio Bíblico - 5 de noviembre - 6:00 p.m. - Aula de enseñanza">
-          <i class="fa-solid fa-book-bible icono-evento"></i>
-          <h3>Estudio Bíblico</h3>
-          <p>5 de noviembre</p>
-        </div>
+            <div class="evento-item">
+              <span class="fecha">22 Oct</span>
+              <div class="detalle">
+                <h3>Jornada de Oración</h3>
+                <p>Salón 2 • 7:00 p.m.</p>
+              </div>
+            </div>
 
-        <div class="evento-card" data-info="Convivencia Familiar - 20 de noviembre - 10:00 a.m. - Patio principal">
-          <i class="fa-solid fa-people-group icono-evento"></i>
-          <h3>Convivencia Familiar</h3>
-          <p>20 de noviembre</p>
+            <div class="evento-item">
+              <span class="fecha">5 Nov</span>
+              <div class="detalle">
+                <h3>Estudio Bíblico</h3>
+                <p>Aula de enseñanza • 6:00 p.m.</p>
+              </div>
+            </div>
+
+            <div class="evento-item">
+              <span class="fecha">20 Nov</span>
+              <div class="detalle">
+                <h3>Convivencia Familiar</h3>
+                <p>Patio principal • 10:00 a.m.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carrusel de imágenes -->
+          <div class="carrusel-eventos">
+            <button class="flecha prev">&#10094;</button>
+            <div class="carrusel-imagenes">
+              <img src="./img/evento1.jpg" alt="Retiro Espiritual">
+              <img src="./img/evento2.jpg" alt="Jornada de Oración">
+              <img src="./img/evento3.jpg" alt="Estudio Bíblico">
+              <img src="./img/evento4.jpg" alt="Convivencia Familiar">
+            </div>
+            <button class="flecha next">&#10095;</button>
+          </div>
         </div>
       </div>
     </section>
+
 
     <script>
       // Mostrar resumen al pasar el cursor
@@ -270,6 +294,36 @@
 
   <!-- Scripts -->
   <script src="./js/header.js"></script>
+
+  <script>
+  const carrusel = document.querySelector('.carrusel-imagenes');
+  const imagenes = document.querySelectorAll('.carrusel-imagenes img');
+  const prevBtn = document.querySelector('.prev');
+  const nextBtn = document.querySelector('.next');
+
+  let index = 0;
+
+  function mostrarImagen() {
+    carrusel.style.transform = `translateX(${-index * 100}%)`;
+  }
+
+  nextBtn.addEventListener('click', () => {
+    index = (index + 1) % imagenes.length;
+    mostrarImagen();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    index = (index - 1 + imagenes.length) % imagenes.length;
+    mostrarImagen();
+  });
+
+  // Auto-cambio cada 4 segundos
+  setInterval(() => {
+    index = (index + 1) % imagenes.length;
+    mostrarImagen();
+  }, 4000);
+</script>
+
 
 
 </body>

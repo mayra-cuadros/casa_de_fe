@@ -1,202 +1,198 @@
 /* --- 1. Reset & estructura base --- */
 html,
 body {
-     font-family: "Georgia", serif;
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    font-family: serif;
-    background: #f4f6fa;
-    color: #222;
+  font-family: "Georgia", serif;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background: #f4f6fa;
+  color: #222;
 }
 
 /* --- 2. Header --- */
 header {
-    background: #34445c;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, .1);
+  background: #34445c;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
 }
 
 .logo-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 15px;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .logo {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    font-family: serif;
-    font-style: oblique;
-    color: #fff;
-    letter-spacing: 1px;
-    flex: 1;
+  margin: 0;
+  font-size: 2.5rem;
+  font-style: oblique;
+  color: #fff;
+  letter-spacing: 1px;
+  flex: 1;
 }
 
 /* --- 3. Navegación --- */
 nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    list-style: none;
-    padding: 0;
-    margin: 15px 0 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 10px;
 }
 
 nav ul li {
-    margin: 5px;
+  margin: 5px;
 }
 
 nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
 }
 
 nav a:hover {
-    color: #78ac7e;
+  color: #78ac7e;
 }
 
-/* --- Responsivo --- */
+/* --- Responsivo Header --- */
 @media (max-width: 768px) {
-    .nav {
-        display: none;
-        flex-direction: column;
-        background: #34445c;
-        position: absolute;
-        top: 70px;
-        right: 20px;
-        padding: 15px;
-        border-radius: 8px;
-    }
+  .nav {
+    display: none;
+    flex-direction: column;
+    background: #34445c;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 8px;
+  }
 
-    .nav.show {
-        display: flex;
-    }
+  .nav.show {
+    display: flex;
+  }
 
-    .nav-toggle {
-        display: block;
-    }
+  .nav-toggle {
+    display: block;
+  }
 }
 
 /* --- 4. Contenedor de Versículo --- */
 .container-versiculo {
-    max-width: 90%;
-    margin: 20px auto;
-    padding: 30px 20px;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+  max-width: 90%;
+  margin: 20px auto;
+  padding: 30px 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .versiculo-texto {
-    font-size: 1.6rem;
-    font-style: italic;
-    color: #222;
-    margin-bottom: 20px;
-    animation: fadeIn 1s ease-in-out;
+  font-size: 1.6rem;
+  font-style: italic;
+  color: #222;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .versiculo-datos {
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #555;
-    margin-top: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #555;
+  margin-top: 10px;
 }
 
 /* --- 5. Botón --- */
 button#nuevo-versiculo {
-    padding: 12px 24px;
-    font-size: 1em;
-    background-color: #78ac7e;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    display: block;
-    margin: 20px auto 0;
-    transition: background-color 0.3s;
+  padding: 12px 24px;
+  font-size: 1em;
+  background-color: #78ac7e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto 0;
+  transition: background-color 0.3s;
 }
 
 button#nuevo-versiculo:hover {
-    background-color: #679c6f;
+  background-color: #679c6f;
 }
 
 /* --- 6. Animaciones --- */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* --- 7. Responsividad --- */
+/* --- 7. Responsividad general --- */
 @media (max-width: 768px) {
-    header {
-        text-align: center;
-    }
+  header {
+    text-align: center;
+  }
 
-    header h1 {
-        font-size: 2rem;
-        text-align: center;
-        width: 100%;
-    }
+  header h1 {
+    font-size: 2rem;
+  }
 
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
 
-    .versiculo-texto {
-        font-size: 1.3rem;
-    }
+  .versiculo-texto {
+    font-size: 1.3rem;
+  }
 
-    .versiculo-datos {
-        font-size: 1rem;
-    }
+  .versiculo-datos {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
-    .logo {
-        width: 40px;
-        height: 40px;
-    }
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
 
-    header h1 {
-        font-size: 1.4rem;
-    }
+  header h1 {
+    font-size: 1.4rem;
+  }
 
-    .versiculo-texto {
-        font-size: 1rem;
-    }
+  .versiculo-texto {
+    font-size: 1rem;
+  }
 
-    .versiculo-datos {
-        font-size: 0.9rem;
-    }
+  .versiculo-datos {
+    font-size: 0.9rem;
+  }
 
-    button#nuevo-versiculo {
-        width: 100%;
-        font-size: 0.9rem;
-        padding: 10px;
-    }
+  button#nuevo-versiculo {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 10px;
+  }
 }
 
 /* ===== EVENTOS DEL MES ===== */
@@ -251,57 +247,42 @@ button#nuevo-versiculo:hover {
 }
 
 /* ===== MISIÓN, VISIÓN Y VALORES ===== */
-.mvv {
-  background-color: #ffffff;
-  padding: 80px 5%; /* ocupa casi todo el ancho */
-  text-align: center;
-  width: 100%;
-}
-
-.mvv h2 {
-  color: #008037;
-  font-size: 2.2rem;
-  margin-bottom: 50px;
-}
-
-/* ===== SECCIÓN: MISIÓN, VISIÓN Y VALORES ===== */
 .mv-container {
-  max-width: 1400px; /* más ancho */
+  max-width: 1300px;
   margin: 80px auto;
   padding: 20px;
-  text-align: center;
 }
 
 .mv-alt-rows {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 70px;
 }
 
 .mv-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  justify-content: space-between;
-  gap: 50px;
+  gap: 40px;
 }
 
 /* Tarjeta de texto */
 .mv-card {
-  flex: 1;
-  text-align: left;
   background-color: #f8faf8;
   border-radius: 20px;
-  padding: 40px 30px;
+  padding: 50px 40px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  text-align: left;
 }
 
 .mv-card h3 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #008037;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
-.mv-card p {
+.mv-card p,
+.mv-card ul {
   font-size: 1.1rem;
   color: #333;
   line-height: 1.6;
@@ -309,55 +290,182 @@ button#nuevo-versiculo:hover {
 
 .mv-card ul {
   list-style-type: disc;
-  padding-left: 20px;
-  color: #333;
-  font-size: 1.1rem;
-  line-height: 1.6;
+  padding-left: 25px;
 }
 
 /* Imagen */
 .mv-media {
-  flex: 1;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .mv-media img {
   width: 100%;
-  max-width: 550px; /* más ancho */
+  max-width: 600px;
   border-radius: 20px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* Alternar orden (imagen ↔ texto) */
 #vision {
-  flex-direction: row-reverse;
+  grid-template-columns: 1fr 1fr;
+}
+#vision .mv-media {
+  order: 1;
+}
+#vision .mv-card {
+  order: 2;
 }
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .mv-row {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     text-align: center;
   }
-  #vision {
-    flex-direction: column;
-  }
+
   .mv-card {
     text-align: center;
+    padding: 30px 20px;
   }
+
   .mv-media img {
     max-width: 100%;
   }
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 900px) {
-  .mvv-container {
-    grid-template-columns: 1fr; /* se vuelve una sola columna en móviles */
-  }
+/* ===== EVENTOS (nota y carrusel) ===== */
+.eventos-mes {
+  background-color: #f5f9f7;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
 
-  .mvv {
-    padding: 50px 25px;
+.nota-eventos {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.nota-header {
+  text-align: center;
+}
+
+.nota-header h2 {
+  font-size: 2rem;
+  color: #004b3a;
+  margin-bottom: 10px;
+}
+
+.nota-header p {
+  color: #555;
+  font-size: 1rem;
+}
+
+.nota-contenido {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.lista-eventos {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.evento-item {
+  display: flex;
+  align-items: center;
+  background: #eaf7f0;
+  padding: 15px 20px;
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+}
+
+.evento-item:hover {
+  transform: translateX(6px);
+}
+
+.fecha {
+  background: #008037;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: 15px;
+  width: 70px;
+  text-align: center;
+}
+
+.detalle h3 {
+  color: #004b3a;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.detalle p {
+  color: #555;
+  font-size: 0.9rem;
+  margin: 4px 0 0;
+}
+
+.carrusel-eventos {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  max-width: 420px;
+  border-radius: 16px;
+}
+
+.carrusel-imagenes {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carrusel-imagenes img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.flecha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background 0.3s;
+}
+
+.flecha:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .nota-contenido {
+    flex-direction: column;
   }
 }
