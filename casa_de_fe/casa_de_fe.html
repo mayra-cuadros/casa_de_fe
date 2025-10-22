@@ -4,23 +4,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Casa de fe</title>
-  <link rel="stylesheet" href="./css/inicio.css" />
+  <title>Casa de Fe</title>
+
+  <!-- Estilos principales -->
+  <link rel="stylesheet" href="./css/inicio.css">
   <link rel="stylesheet" href="./css/header.css">
   <link rel="stylesheet" href="./css/footer.css">
-
   <link rel="stylesheet" href="./css/mision.css">
   <link rel="stylesheet" href="./css/equipo.css">
   <link rel="stylesheet" href="./css/compromiso.css">
   <link rel="stylesheet" href="./css/galeria.css">
-
-  <link rel="icon" href="./img/cdf2.png" type="image/png">
   <link rel="stylesheet" href="./css/mapa.css">
+  <link rel="stylesheet" href="./css/testimonios.css">
+  <link rel="stylesheet" href="css/reserva.css">
+
+
+  <!-- Icono del sitio -->
+  <link rel="icon" href="./img/cdf2.png" type="image/png">
 
   <!-- Iconos -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-
 
 <body>
   <header class="site-header">
@@ -28,26 +32,22 @@
       <a class="brand" href="casa_de_fe.html">
         <img src="./img/logo-alterno.png" alt="Casa de Fe - CDF" class="logo">
       </a>
-      <!-- Banner -->
 
-      <!-- Menu principal  Adriano-->
+      <!-- Menú principal -->
       <nav id="site-nav" class="nav">
-        <!-- logo Adriano-->
         <a href="casa_de_fe.html">Inicio</a>
-        <!-- Consultar calendarios de eventos Karen-->
         <a href="./paginas/evento.html">Evento</a>
-        <!-- Reseña de Experiencia del Curso caleb -->
         <a href="./paginas/cursos.html">Cursos</a>
-        <!-- Inscripción a cursos de la Iglesia Karen-->
         <a href="./paginas/contacto.html">Contacto</a>
-        <!-- Donación segura desde la web Adrian-->
         <a href="./paginas/ofrenda.html">Ofrenda</a>
         <a href="./paginas/experiencias.html">Experiencias</a>
+        <a href="./paginas/reserva.html">Reserva</a>
       </nav>
+    </div>
   </header>
 
   <main class="centrar">
-    <!-- Versículo Bíblico Tatiana -->
+    <!-- Versículo Bíblico -->
     <div class="container-versiculo">
       <div class="versiculo-texto" id="versiculo-texto"></div>
       <div class="versiculo-datos" id="versiculo-datos"></div>
@@ -55,20 +55,15 @@
 
     <script src="./js/versiculo.js"></script>
 
-
-
+    <!-- Misión, visión y valores -->
     <section class="mv-container">
-
-      <!-- Misión, visión y valores -->
       <div class="mv-alt-rows">
 
-        <!-- Misión (card → imagen) -->
         <div class="mv-row" id="mision">
           <article class="mv-card">
             <h3>Misión</h3>
             <p>
-              Honrar y difundir su palabra, ayudando a las personas a fortalecer su fe y vivir conforme a los principios
-              bíblicos.
+              Honrar y difundir su palabra, ayudando a las personas a fortalecer su fe y vivir conforme a los principios bíblicos.
             </p>
           </article>
           <figure class="mv-media">
@@ -76,7 +71,6 @@
           </figure>
         </div>
 
-        <!-- Visión (imagen → card) -->
         <div class="mv-row" id="vision">
           <figure class="mv-media">
             <img src="./img/vision.webp" alt="Imagen Visión" loading="lazy" decoding="async">
@@ -84,13 +78,11 @@
           <article class="mv-card">
             <h3>Visión</h3>
             <p>
-              Ser una comunidad espiritual unida que refleje el amor de Cristo y promueva el crecimiento espiritual y
-              social de sus miembros.
+              Ser una comunidad espiritual unida que refleje el amor de Cristo y promueva el crecimiento espiritual y social de sus miembros.
             </p>
           </article>
         </div>
 
-        <!-- Valores (card → imagen) -->
         <div class="mv-row" id="valores">
           <article class="mv-card">
             <h3>Valores</h3>
@@ -107,13 +99,9 @@
           </figure>
         </div>
       </div>
-
-
     </section>
 
-
-
-    <!-- ====== MÓDULO DE EVENTOS DEL MES ====== -->
+    <!-- Eventos del Mes -->
     <section class="eventos-mes">
       <div class="nota-eventos">
         <div class="nota-header">
@@ -122,7 +110,6 @@
         </div>
 
         <div class="nota-contenido">
-          <!-- Lista de eventos -->
           <div class="lista-eventos">
             <div class="evento-item">
               <span class="fecha">14 Oct</span>
@@ -135,7 +122,7 @@
             <div class="evento-item">
               <span class="fecha">23 Oct</span>
               <div class="detalle">
-                <h3>Estudio biblico</h3>
+                <h3>Estudio bíblico</h3>
                 <p>Salón 2 • 7:00 p.m.</p>
               </div>
             </div>
@@ -151,7 +138,7 @@
             <div class="evento-item">
               <span class="fecha">28 Nov</span>
               <div class="detalle">
-                <h3>Jornada de oracion</h3>
+                <h3>Jornada de oración</h3>
                 <p>Patio principal • 10:00 a.m.</p>
               </div>
             </div>
@@ -172,56 +159,80 @@
       </div>
     </section>
 
-
-    <script>
-      // Mostrar resumen al pasar el cursor
-      document.querySelectorAll('.evento-card').forEach(card => {
-        card.addEventListener('mouseenter', () => {
-          const info = card.getAttribute('data-info');
-          card.setAttribute('title', info);
-        });
-      });
-    </script>
-
-
-    </div>
-
+    <!-- Conoce a Nuestro Equipo -->
     <section class="equipo" id="equipo">
       <h2>Conoce a Nuestro Equipo</h2>
       <div class="equipo-contenedor">
-
-        <!-- Pastor Principal -->
         <div class="equipo-miembro">
-          <img src="./img/pastor.jpg" alt="Pastor">
-          <h3>Pr. Gustavo Martínez </h3>
-          <p class="rol">Pastor Principal</p>
-          <p class="descripcion">Descripcion</p>
+          <img src="./img/encargado_1.jpg" alt="Pastor Principal">
+          <h3>Pr. Gustavo Martínez</h3>
+          <p class="rol">Pastor Principal en Casa de Fe</p>
+          <p class="descripcion">Mas de 30 años al servicio del Señor y graduado en la escuela de bellas artes lima.</p>
         </div>
 
-        <!-- Líder 1 -->
         <div class="equipo-miembro">
-          <img src="./img/lider1.jpg" alt="Encargado 1">
-          <h3>Nombre</h3>
-          <p class="rol">Encargado 1</p>
-          <p class="descripcion">Descripcion</p>
+          <img src="./img/encargado_2.jpg" alt="Encargado 1">
+          <h3>María Torres</h3>
+          <p class="rol">Pastora en Casa de Fe</p>
+          <p class="descripcion">Motiva a los jóvenes a crecer en la fe y en valores cristianos.</p>
         </div>
 
-        <!-- Líder 2 -->
-        <div class="equipo-miembro">
-          <img src="./img/lider2.jpg" alt="Encargado 2">
-          <h3>Nombre</h3>
-          <p class="rol">Encargado 2</p>
-          <p class="descripcion">Descripcion</p>
-        </div>
-
-      </div>
     </section>
 
+    <!-- ===================== SECCIÓN DE TESTIMONIOS ===================== -->
+    <section class="testimonios" id="testimonios">
+      <h2>Testimonios de Fe</h2>
+      <p>Historias reales de cómo Dios transforma vidas en nuestra comunidad</p>
 
+      <div class="testimonios-contenedor">
+        <!-- Testimonio 1 -->
+        <div class="testimonio-card">
+          <div class="video-testimonio">
+            <video controls>
+              <source src="./videos/testimonio1.mp4" type="video/mp4">
+              Tu navegador no soporta video.
+            </video>
+          </div>
+          <div class="texto-testimonio">
+            <h3>María López</h3>
+            <p>“Desde que llegué a Casa de Fe, mi vida cambió por completo. Encontré paz, amor y una nueva familia.”</p>
+          </div>
+        </div>
 
-    <!-- Galería de Imágenes de la Iglesia -->
+        <!-- Testimonio 2 -->
+        <div class="testimonio-card">
+          <div class="video-testimonio">
+            <video controls>
+              <source src="./videos/testimonio2.mp4" type="video/mp4">
+              Tu navegador no soporta video.
+            </video>
+          </div>
+          <div class="texto-testimonio">
+            <h3>Carlos Pérez</h3>
+            <p>“Dios restauró mi hogar y mi corazón. Hoy puedo testificar de su fidelidad y amor infinito.”</p>
+          </div>
+        </div>
+
+        <!-- Testimonio 3 -->
+        <div class="testimonio-card">
+          <div class="video-testimonio">
+            <video controls>
+              <source src="./videos/testimonio3.mp4" type="video/mp4">
+              Tu navegador no soporta video.
+            </video>
+          </div>
+          <div class="texto-testimonio">
+            <h3>Ana Torres</h3>
+            <p>“Cada mensaje y enseñanza me inspira a seguir creciendo en mi fe y servir a los demás.”</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =================== FIN DE SECCIÓN DE TESTIMONIOS =================== -->
+
+    <!-- Galería -->
     <section class="seccion-galeria" id="iglesia">
-      <h2 class="titulo-galeria"> Nuestra Iglesia </h2>
+      <h2 class="titulo-galeria">Nuestra Iglesia</h2>
       <p class="subtitulo-galeria">Momentos de fe, unión y esperanza en Casa de Fe</p>
 
       <div id="galeria">
@@ -232,40 +243,36 @@
       </div>
     </section>
 
-    <!-- MAPA DIRECCION DE LA IGLESIA-->
-        <section class="seccion-mapa" id="mapa">  
-          <h2 class="titulo-mapa">NUESTRA UBICACION</h2>
-          <p class="subtitulo-mapa">Estamos en Chimbote ven a visitarnos y conocer CASA DE FE</p>
-          <div class="mapa-container">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.234567890123!2d-78.567890!3d-9.074567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x123456789abcdef!2sCasa%20de%20Fe%20Chimbote!5e0!3m2!1ses!2spe!4v1600000000000"
-              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-          </div>
-        </section>
-
+    <!-- Mapa -->
+    <section class="seccion-mapa" id="mapa">
+      <h2 class="titulo-mapa">NUESTRA UBICACIÓN</h2>
+      <p class="subtitulo-mapa">Estamos en Chimbote, ven a visitarnos y conocer CASA DE FE</p>
+      <div class="mapa-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.234567890123!2d-78.567890!3d-9.074567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x123456789abcdef!2sCasa%20de%20Fe%20Chimbote!5e0!3m2!1ses!2spe!4v1600000000000"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
   </main>
+
+  <!-- Footer -->
   <footer class="footer">
     <div class="footer-container">
-
-
-      <!-- Columna 1 -->
       <div class="footer-col">
         <h4>Casa de Fe</h4>
         <p>
           Somos una Iglesia de Puertas Abiertas en Chimbote, comprometida con la comunidad.
-          Vivimos una fe basada en la Biblia, con Jesús como fundamento, alejados de la religiosidad y el
-          legalismo.
+          Vivimos una fe basada en la Biblia, con Jesús como fundamento, alejados de la religiosidad y el legalismo.
         </p>
         <div class="social-icons">
-            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://x.com/i/flow/login?lang=es" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.youtube.com/@adriandelgadogonzales2542" target="_blank"><i class="fab fa-youtube"></i></a>
-          </div>
+          <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://x.com/i/flow/login?lang=es" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.youtube.com/@adriandelgadogonzales2542" target="_blank"><i class="fab fa-youtube"></i></a>
         </div>
+      </div>
 
-      <!-- Columna 2 -->
       <div class="footer-col">
         <h4>Navegación</h4>
         <ul>
@@ -274,10 +281,10 @@
           <li><a href="./paginas/cursos.html">Cursos</a></li>
           <li><a href="./paginas/contacto.html">Contacto</a></li>
           <li><a href="./paginas/ofrenda.html">Ofrenda</a></li>
+          <li><a href="./paginas/reserva.html">Reserva</a></li>
         </ul>
       </div>
 
-      <!-- Columna 3 -->
       <div class="footer-col">
         <h4>Acerca de</h4>
         <ul>
@@ -286,10 +293,10 @@
           <li><a href="#valores">Valores</a></li>
           <li><a href="#equipo">Nuestro Equipo</a></li>
           <li><a href="#iglesia">Nuestra Iglesia</a></li>
+          <li><a href="#testimonios">Testimonios</a></li>
         </ul>
       </div>
 
-      <!-- Columna 4 -->
       <div class="footer-col">
         <h4>Contacto</h4>
         <ul class="contact-info">
@@ -305,41 +312,35 @@
     </div>
   </footer>
 
-
   <!-- Scripts -->
   <script src="./js/header.js"></script>
 
   <script>
-  const carrusel = document.querySelector('.carrusel-imagenes');
-  const imagenes = document.querySelectorAll('.carrusel-imagenes img');
-  const prevBtn = document.querySelector('.prev');
-  const nextBtn = document.querySelector('.next');
+    const carrusel = document.querySelector('.carrusel-imagenes');
+    const imagenes = document.querySelectorAll('.carrusel-imagenes img');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    let index = 0;
 
-  let index = 0;
+    function mostrarImagen() {
+      carrusel.style.transform = `translateX(${-index * 100}%)`;
+    }
 
-  function mostrarImagen() {
-    carrusel.style.transform = `translateX(${-index * 100}%)`;
-  }
+    nextBtn.addEventListener('click', () => {
+      index = (index + 1) % imagenes.length;
+      mostrarImagen();
+    });
 
-  nextBtn.addEventListener('click', () => {
-    index = (index + 1) % imagenes.length;
-    mostrarImagen();
-  });
+    prevBtn.addEventListener('click', () => {
+      index = (index - 1 + imagenes.length) % imagenes.length;
+      mostrarImagen();
+    });
 
-  prevBtn.addEventListener('click', () => {
-    index = (index - 1 + imagenes.length) % imagenes.length;
-    mostrarImagen();
-  });
-
-  // Auto-cambio cada 4 segundos
-  setInterval(() => {
-    index = (index + 1) % imagenes.length;
-    mostrarImagen();
-  }, 4000);
-</script>
-
-
-
+    setInterval(() => {
+      index = (index + 1) % imagenes.length;
+      mostrarImagen();
+    }, 4000);
+  </script>
 </body>
 
 </html>

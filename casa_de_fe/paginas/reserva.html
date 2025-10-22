@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Experiencias de la Comunidad - Casa de Fe</title>
+  <title>Reserva de Eventos - Casa de Fe</title>
 
   <link rel="icon" href="../img/cdf2.png" type="image/png" />
   <link rel="stylesheet" href="../css/inicio.css" />
-  <link rel="stylesheet" href="../css/footer.css" />
   <link rel="stylesheet" href="../css/header.css" />
-  <link rel="stylesheet" href="../css/experiencias.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
+  <link rel="stylesheet" href="../css/reserva.css" />
 
-  <!-- Iconos -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body class="theme-green">
-
   <!-- ===== HEADER ===== -->
   <header class="site-header">
     <div class="header-inner">
@@ -29,12 +26,10 @@
         <a href="../casa_de_fe.html">Inicio</a>
         <a href="./evento.html">Evento</a>
         <a href="./cursos.html">Cursos</a>
-        <a href="./experiencias.html" class="active">Experiencias</a>
+        <a href="./experiencias.html">Experiencias</a>
         <a href="./contacto.html">Contacto</a>
         <a href="./ofrenda.html">Ofrenda</a>
-          <li><a href="experiencias.html">Experiencias</a></li>
-          <li><a href="reserva.html">Reserva</a></li>
-
+        <a href="./reserva.html" class="active">Reserva</a>
       </nav>
 
       <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
@@ -42,68 +37,56 @@
   </header>
 
   <!-- ===== CONTENIDO ===== -->
-  <main class="experiencias">
-    <h2 class="titulo-seccion">Experiencias de la Comunidad</h2>
-    <p class="subtitulo-seccion">
-      En Casa de Fe compartimos momentos llenos de amor, esperanza y unidad.
-      Cada experiencia refleja el poder de Dios actuando en nuestras vidas y en nuestra comunidad.
+  <main class="reserva-section">
+    <h2 class="reserva-titulo">Reserva tu Evento Especial</h2>
+    <p class="reserva-descripcion">
+      Como creyente, puedes reservar un matrimonio, bautizo u otros eventos para vivir este momento junto a la comunidad y la palabra de nuestra religión.
     </p>
 
-    <div class="experiencias-grid">
+    <form id="reservaForm" class="reserva-form">
+      <div class="form-group">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required />
+      </div>
 
-      <article class="experiencia-card">
-        <div class="media">
-          <img src="../img/experiencia15.jpg" alt="Reunión de oración">
-        </div>
-        <div class="info">
-          <h3>Reunión de Oración</h3>
-          <time datetime=""></time>
-          <p>Un tiempo especial para fortalecer nuestra fe juntos, compartir la palabra y orar en comunidad.</p>
-        </div>
-      </article>
+      <div class="form-group">
+        <label for="tipoEvento">Tipo de evento:</label>
+        <select id="tipoEvento" name="tipoEvento" required>
+          <option value="">Seleccionar...</option>
+          <option value="Matrimonio">Matrimonio</option>
+          <option value="Bautizo">Bautizo</option>
+          <option value="Otro">Otro</option>
+        </select>
+      </div>
 
-      
+      <div class="form-group">
+        <label for="fecha">Fecha del evento:</label>
+        <input type="date" id="fecha" name="fecha" required />
+      </div>
 
-      <article class="experiencia-card">
-        <div class="media">
-          <img src="../img/experiencia08.jpg" alt="Servicio a la comunidad">
-        </div>
-        <div class="info">
-          <h3>Servicio a la Comunidad</h3>
-          <time datetime=""></time>
-          <p>Llevamos esperanza y ayuda a los más necesitados, cumpliendo nuestra misión de servir como Cristo.</p>
-        </div>
-      </article>
+      <div class="form-group">
+        <label for="hora">Hora:</label>
+        <input type="time" id="hora" name="hora" required />
+      </div>
 
-      <article class="experiencia-card">
-        <div class="media">
-          <img src="../img/experiencia17.jpg" alt="Servicio a la comunidad">
-        </div>
-        <div class="info">
-          <h3>Alegría que contagia</h3>
-          <time datetime=""></time>
-          <p>Los niños de nuestra comunidad participaron en una hermosa actividad donde se compartieron regalos, diversión y palabras de fe. Una muestra del amor que une a nuestra familia espiritual..</p>
-        </div>
-      </article>
+      <div class="form-group">
+        <label for="asistentes">Número de asistentes:</label>
+        <input type="number" id="asistentes" name="asistentes" min="1" required />
+      </div>
 
+      <div class="form-group">
+        <label for="comentarios">Comentarios adicionales:</label>
+        <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+      </div>
 
-      <article class="experiencia-card">
-        <div class="media">
-          <video controls>
-            <source src="../videos/experienciaVideo.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="info">
-          <h3>Campamento Juvenil</h3>
-          <time datetime=></time>
-          <p>Días inolvidables donde nuestros jóvenes fortalecieron su espíritu en un ambiente de amor y amistad.</p>
-        </div>
-      </article>
+      <button type="submit" class="btn-reserva">Reservar evento</button>
+    </form>
 
+    <div id="mensajeConfirmacion" class="mensaje-confirmacion" style="display:none;">
+      ✅ ¡Tu reserva ha sido enviada con éxito! Te contactaremos pronto para confirmar los detalles.
     </div>
   </main>
 
-  <!-- ===== FOOTER ===== -->
 <footer class="footer">
     <div class="footer-container">
       <!-- Columna 1 -->
@@ -166,7 +149,6 @@
 
 
   <script src="../js/header.js"></script>
-  <script src="../js/experiencias.js"></script>
+  <script src="../js/reserva.js"></script>
 </body>
-
 </html>
