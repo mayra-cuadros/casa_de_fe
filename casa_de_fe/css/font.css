@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('/assets/font/avenir/avenir-next-bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Aplicar la fuente a TODA la página */
+* {
+  font-family: 'Avenir Next' !important;
+  font-weight: 700 !important;
+}
+
