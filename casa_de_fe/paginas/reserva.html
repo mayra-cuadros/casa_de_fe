@@ -15,18 +15,19 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- EmailJS SDK -->
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script>
-    (function () {
-      emailjs.init("4GWSj8idUQA8uO0bP"); // Tu Public Key
-    })();
+  <!-- EmailJS SDK v4 (la correcta) -->
+  <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
   </script>
-
+  <script>
+    emailjs.init({
+      publicKey: "4GWSj8idUQA8uO0bP",
+    });
+  </script>
 </head>
 
 <body class="theme-green">
-  <!-- ===== HEADER ===== -->
+
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="../casa_de_fe.html">
@@ -47,14 +48,12 @@
     </div>
   </header>
 
-  <!-- ===== CONTENIDO ===== -->
   <main class="reserva-section">
     <h2 class="reserva-titulo">Reserva tu Evento Especial</h2>
     <p class="reserva-descripcion">
       Como creyente, puedes reservar un matrimonio, bautizo u otros eventos para vivir este momento junto a la comunidad.
     </p>
 
-    <!-- FORMULARIO SIN PHP -->
     <form id="reservaForm" class="reserva-form">
 
       <div class="form-group">
@@ -101,16 +100,15 @@
   </main>
 
   <footer class="footer">
-    <!-- ... tu footer igual ... -->
+    <!-- Tu footer igual -->
   </footer>
 
-
-  <!-- SCRIPT EmailJS (corregido y perfecto) -->
+  <!-- SCRIPT EmailJS -->
   <script>
     document.getElementById("reservaForm").addEventListener("submit", function (e) {
       e.preventDefault();
 
-      emailjs.send("service_6g4uqa5", "template_ID_AQUI", {
+      emailjs.send("service_6g4uqa5", "template_fcz46nr", {
         nombre: document.getElementById("nombre").value,
         tipoEvento: document.getElementById("tipoEvento").value,
         fecha: document.getElementById("fecha").value,
@@ -118,13 +116,13 @@
         asistentes: document.getElementById("asistentes").value,
         comentarios: document.getElementById("comentarios").value,
       })
-        .then(function () {
+        .then(() => {
           document.getElementById("mensajeConfirmacion").style.display = "block";
           document.getElementById("reservaForm").reset();
         })
-        .catch(function (error) {
-          alert("Error al enviar la reserva ");
-          console.log(error);
+        .catch((error) => {
+          console.error("ERROR:", error);
+          alert("Error al enviar la reserva. Revisa tu Template ID o tu cuenta EmailJS");
         });
     });
   </script>
