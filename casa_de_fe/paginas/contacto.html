@@ -11,9 +11,16 @@
   <link rel="stylesheet" href="../css/footer.css"/>
   <link rel="stylesheet" href="../css/header.css">
   <link rel="stylesheet" href="css/font.css">
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    emailjs.init({
+      publicKey: "4GWSj8idUQA8uO0bP"
+    });
+  </script>
 </head>
 
-<!-- Aplica el tema verde -->
 <body class="theme-green">
   <header class="site-header">
     <div class="header-inner">
@@ -38,27 +45,22 @@
   <main class="contenedor">
     <h2>Contáctanos</h2>
 
-    <form class="formulario" action="enviar_formulario.php" method="POST">
-
-      <!-- Nombre -->
+    <form class="formulario" id="contactoForm">
       <div class="campo">
         <label for="nombre">Nombre completo</label>
         <input type="text" id="nombre" name="nombre" required>
       </div>
 
-      <!-- Correo -->
       <div class="campo">
         <label for="email">Correo electrónico</label>
         <input type="email" id="email" name="email" required>
       </div>
 
-      <!-- Teléfono -->
       <div class="campo">
         <label for="telefono">Teléfono de contacto</label>
         <input type="tel" id="telefono" name="telefono" required>
       </div>
 
-      <!-- Tipo de información -->
       <div class="campo">
         <label for="tipo">Tipo de información que desea</label>
         <select id="tipo" name="tipo" required>
@@ -70,8 +72,7 @@
         </select>
       </div>
 
-      <!-- Cursos (solo visible si elige inscripción) -->
-      <div class="campo" id="curso-container">
+      <div class="campo" id="curso-container" style="display:none;">
         <label for="curso">Curso seleccionado</label>
         <select id="curso" name="curso">
           <option value="">-- Seleccione un curso --</option>
@@ -81,27 +82,24 @@
         </select>
       </div>
 
-      <!-- Mensaje adicional -->
       <div class="campo campo-grande">
         <label for="mensaje">Mensaje / Detalle de su solicitud</label>
-        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escriba aquí su consulta..." required></textarea>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
       </div>
 
-      <!-- Botón -->
       <div class="campo campo-boton">
         <button type="submit">Enviar solicitud</button>
       </div>
     </form>
 
-    <!-- mensaje de confirmación -->
     <div id="confirmacion" class="oculto">
       Tu solicitud fue registrada con éxito. ¡Gracias por contactarnos!
     </div>
   </main>
 
-<footer class="footer">
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
     <div class="footer-container">
-      <!-- Columna 1 -->
       <div class="footer-col">
         <h4>Casa de Fe</h4>
         <p>
@@ -116,21 +114,18 @@
         </div>
       </div>
 
-      <!-- Columna 2 -->
       <div class="footer-col">
         <h4>Navegación</h4>
         <ul>
           <li><a href="../casa_de_fe.html">Inicio</a></li>
-          <li><a href="../paginas/evento.html">Evento</a></li>
-          <li><a href="../paginas/cursos.html">Cursos</a></li>
-          <li><a href="../paginas/contacto.html">Contacto</a></li>
-          <li><a href="../paginas/ofrenda.html">Ofrenda</a></li>
-          <li><a href="../paginas/reserva.html">Reserva</a></li>
-          
+          <li><a href="evento.html">Evento</a></li>
+          <li><a href="cursos.html">Cursos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="ofrenda.html">Ofrenda</a></li>
+          <li><a href="reserva.html">Reserva</a></li>
         </ul>
       </div>
 
-      <!-- Columna 3 -->
       <div class="footer-col">
         <h4>Acerca de</h4>
         <ul>
@@ -143,7 +138,6 @@
         </ul>
       </div>
 
-      <!-- Columna 4 -->
       <div class="footer-col">
         <h4>Contacto</h4>
         <ul class="contact-info">
@@ -159,7 +153,35 @@
     </div>
   </footer>
 
+  <!-- ====== SCRIPT EmailJS ====== -->
+  <script>
+    document.getElementById("tipo").addEventListener("change", function () {
+      const cursoContainer = document.getElementById("curso-container");
+      cursoContainer.style.display = this.value === "inscripcion" ? "block" : "none";
+    });
 
-  <script src="../js/contacto.js"></script>
+    document.getElementById("contactoForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      emailjs.send("service_6g4uqa5", "template_fcz46nr", {
+        nombre: document.getElementById("nombre").value,
+        email: document.getElementById("email").value,
+        telefono: document.getElementById("telefono").value,
+        tipo: document.getElementById("tipo").value,
+        curso: document.getElementById("curso").value || "No aplica",
+        mensaje: document.getElementById("mensaje").value
+      })
+      .then(() => {
+        document.getElementById("confirmacion").style.display = "block";
+        document.getElementById("contactoForm").reset();
+        document.getElementById("curso-container").style.display = "none";
+      })
+      .catch(err => {
+        alert(" Error al enviar el mensaje. Revisa tu Template ID en EmailJS.");
+        console.error(err);
+      });
+    });
+  </script>
+
 </body>
 </html>
